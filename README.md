@@ -7,8 +7,8 @@ The main page will be an introductory webpage about Evan, showing a headshot, a 
 It will also have a link to a contact page
 Each button page will be the start of a branching flow.
 
-Link one will lead to an about me website with expicit focus on Evan's software development. Link two will lead to a website about his involvements in music
+Link one will lead to an about me website with explicit focus on Evan's software development. Link two will lead to a website about his involvements in music
 
-Each site will have an about me page, and a portfolio page, Additionally. They will each have a link that goes to the aforementioned contact page
+Each site will have an about me page, and a portfolio page. Additionally, they will each have a link that goes to the aforementioned contact page
 
 The music site alone will link to a "lessons" website, which is a standalone website that provides the user information about Evan (as well as other teachers) lesson schedules, policies, etc.
