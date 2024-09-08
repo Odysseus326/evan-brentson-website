@@ -4,81 +4,132 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;  /* Sizing includes margin/padding, unlike content-box */
 } 
 
 /* || VARIABLES }} */    
 :root {
     --FF: "Ninito", sans-serif;
     --FS: 1.5rem;
+    --FS-BIG: 2.5rem;
     --FC: whitesmoke;
     --BGCOLOR: #140F2D;
     --RADIAL-BGCOLOR: #312d46;
     --GEN-SECCOLOR: #F49D37;  /* General Secondary Color */
-    --SWE-SECCOLOR: #3F88C5;  /* SWE Secondary Color */
+    --DEV-SECCOLOR: #3F88C5;  /* SWE Secondary Color */
     --MUS-SECCOLOR: #D72638;  /* Music Secondary Color */
-
+    --BORDER-RAD: 50px;
 }
 
 body {
     font-family: var(--FF);
     font-size: var(--FS);
-    background-color: var(--BGCOLOR);
+    color: var(--FC);
     background-image: linear-gradient(var(--RADIAL-BGCOLOR), var(--BGCOLOR));
-    height: 150vh;
-}
-
-#starter {
-height: 100%;
-}
-
-/* || DIVIDER || */
-.divider {
-    background-color: var(--GEN-SECCOLOR);
-    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* || HEADER || */
-#header {
-    color: var(--RADIAL-BGCOLOR);
+header {
+    font-size: 0.8rem;
+    background-color: black;
+    height: 60px;
     display: flex;
     justify-content: right;
     align-items: center;
-    padding-right: 40px;
+    padding-right: 80px;
     position: fixed;  /* Holds header bar in place */
     top: 0;  /* Keeps header bar at top of page */
     left: 0;  /* Keeps header bar anchored to the left side of the page */
     width: 100%;  /* Stretches header bar across entire viewport */
-    z-index: 1000;  /* Ensures it stays on top of other elements */
+    z-index: 1000;  /* Ensures it stays on top layer of page (z-axis) */
 }
 
 #nav {
     list-style-type: none;  /* Removes bullets */
     display: flex;
-    gap: 60px;
+    gap: 40px;
 }
 
 a, a:visited {
-    color: var(--RADIAL-BGCOLORBGCOLOR);
+    color: whitesmoke;
     text-decoration: none;
     cursor: pointer;
 }
 
 a:hover, a:focus {
-    color: #5e3d17;
+    color: white;
 }
 
 a:active {
-    color: #b17129;
-}
-
-main {
-    color: whitesmoke;
+    color: rgba(255, 255, 255, 0.575);
 }
 
 #intro {
-    font-size: 4rem;
+    font-size: var(--FS-BIG);
+    margin-top: 12vh;
+    padding-top: 60px;
     display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     justify-content: center;
-    margin-top: 16vh;
+    align-items: center;
+}
+
+#content {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}
+
+#introLeft {
+    width: 500px;
+    line-height: 2;
+}
+
+#name {
+    color: var(--GEN-SECCOLOR);
+    text-align: center;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: var(--GEN-SECCOLOR)
+}
+
+#headshot {
+    width: 500px;
+    height: 500px;
+    border-radius: var(--BORDER-RAD);
+}
+
+#btnLinks {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.btnNav {
+    font-size: 25px;
+    width: 400px;
+    height: 60px;
+    border: 2px solid;
+    border-radius: var(--BORDER-RAD);
+    text-align: center;
+    place-content: center;
+}
+
+#btnDev {
+    border-color: var(--DEV-SECCOLOR);
+
+}
+
+#btnMus {
+    border-color: var(--MUS-SECCOLOR);
 }

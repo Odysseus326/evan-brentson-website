@@ -5,58 +5,47 @@
         <meta name="author" content="Evan Brentson">
         <meta name="description" content="This website is about Evan Brentson's journey through software development and music.">
         <title>Evan Brentson's Website</title>
-        <link rel="icon" href="" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">
         <link rel="stylesheet" href="../css/default.css">
     </head>
-
-
     <body>
-
-        
-    
-            <!-- // HEADER NAVIGATION BAR // -->
-
-
+        <!-- // HEADER NAVIGATION BAR // -->
+        <header class="divider">
+            <ul id="nav">
+                <!-- HOME LINK -->
+                <li><a href="#">HOME</a></li>
+                <!-- ABOUT ME LINK -->
+                <li><a href="about.html">ABOUT</a></li>
+                <!-- SWE PORTFOLIO LINK -->
+                <li><a href="swe-portfolio.html">PORTFOLIO</a></li>
+                <!-- MUSICAL EXPERIENCE-->
+                <li><a href="musical-experience.html">SKILLS</a></li>
+                <!--  LESSONS -->
+                <li><a href="">LESSONS</a></li>
+                <!-- CONTACT -->
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </header>
         <main>
-            <div id="#starter">
-                <section id="header" class="divider">
-                    <ul id="nav">
-                        <!-- HOME LINK -->
-                        <li><a href="#">HOME</a></li>
-                        <!-- ABOUT ME LINK -->
-                        <li><a href="about-me.html">ABOUT ME</a></li>
-                        <!-- SWE PORTFOLIO LINK -->
-                        <li><a href="swe-portfolio.html">SWE PORTFOLIO</a></li>
-                        <!-- MUSICAL EXPERIENCE-->
-                        <li><a href="musical-experience.html">MUSICAL EXPERIENCE</a></li>
-                        <!--  LESSONS -->
-                        <li><a href="">LESSONS</a></li>
-                        <!-- CONTACT -->
-                        <li><a href="contact.html">CONTACT</a></li>
-                    </ul>
+            <article id="intro">
+                <section id="content">
+                    <div id="introLeft">    
+                        <div id="greet">
+                            <h1 id="name">I am Evan Brentson</h1>
+                            <hr>
+                            <p>I am a <span id="pDev">software engineer</span> and a <span id="pMus">musician</span> with a lot of experience with leadership and teaching positions</p>
+                        </div>
+                        <div id="btnLinks">
+                            <a href="" id="btnDev" class="btnNav">Development</a>
+                            <a href="" id="btnMus" class="btnNav">Music</a>
+                        </div>
+                    </div>
+                    <div id="introRight">
+                        <img id="headshot" src="../imgs/headshot.jpg" alt="Headshot of Evan Brentson">
+                    </div>
                 </section>
 
-                <article id="intro">
-                    <section id="introLeft">
-                            
-                        <div id="greet">
-                            <h1>My name is Evan Brentson</h1>
-                            <p>I am a software engineer and a musician with emphasis in percussion</p>
-                        </div>
-
-                        <div id="button-links">
-                            <a href="swe-portfolio.html">Developer<span class="button-link">Portfolio</span></a>
-                            <a href="musical-experience.html">Musical<span class="button-link">Experience</span></a>
-                        </div>
-
-                    </section>
-
-                    <img id="introRight" src="../imgs/headshot.jpg" width="600">
-                </article>
-
-                <div id="footer" class="divider"></div>  <!-- Divider box -->
-
-            </div>
+            </article>
         </main>
     </body>
 </html>
