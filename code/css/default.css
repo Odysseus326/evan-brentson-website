@@ -1,6 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
 /* BROWSER RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 } 
+
+/* || VARIABLES }} */    
+:root {
+    --FF: "Ninito", sans-serif;
+    --FS: 1.5rem;
+    --FC: whitesmoke;
+    --BGCOLOR: #140F2D;
+    --RADIAL-BGCOLOR: #312d46;
+    --GEN-SECCOLOR: #F49D37;  /* General Secondary Color */
+    --SWE-SECCOLOR: #3F88C5;  /* SWE Secondary Color */
+    --MUS-SECCOLOR: #D72638;  /* Music Secondary Color */
+
+}
+
+body {
+    font-family: var(--FF);
+    font-size: var(--FS);
+    background-color: var(--BGCOLOR);
+    background-image: linear-gradient(var(--RADIAL-BGCOLOR), var(--BGCOLOR));
+    height: 150vh;
+}
+
+#starter {
+height: 100%;
+}
+
+/* || DIVIDER || */
+.divider {
+    background-color: var(--GEN-SECCOLOR);
+    height: 60px;
+}
+
+/* || HEADER || */
+#header {
+    color: var(--RADIAL-BGCOLOR);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 40px;
+    position: fixed;  /* Holds header bar in place */
+    top: 0;  /* Keeps header bar at top of page */
+    left: 0;  /* Keeps header bar anchored to the left side of the page */
+    width: 100%;  /* Stretches header bar across entire viewport */
+    z-index: 1000;  /* Ensures it stays on top of other elements */
+}
+
+#nav {
+    list-style-type: none;  /* Removes bullets */
+    display: flex;
+    gap: 60px;
+}
+
+a, a:visited {
+    color: var(--RADIAL-BGCOLORBGCOLOR);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover, a:focus {
+    color: #5e3d17;
+}
+
+a:active {
+    color: #b17129;
+}
+
+main {
+    color: whitesmoke;
+}
+
+#intro {
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 16vh;
+}
