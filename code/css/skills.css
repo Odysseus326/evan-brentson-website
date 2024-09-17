@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+/* BROWSER RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* Sizing includes margin/padding, unlike content-box */
+} 
+:root {
+/* || VARIABLES || */
+
+    /* || GENERAL || */
+    --FF: "Ninito", sans-serif;
+    --FS: 1.5rem;
+    --FS-BIG: 2.5rem;
+
+    /* || COLORS || */
+    --FC: whitesmoke;
+    --BGCOLOR: #140F2D;
+    --RADIAL-BGCOLOR: #312d46;
+    --GEN-SECCOLOR: #F49D37;  /* General Secondary Color */
+    --DEV-SECCOLOR: #3F88C5;  /* SWE Secondary Color */
+    --MUS-SECCOLOR: #D72638;  /* Music Secondary Color */
+
+    /* || FORMAT || */
+    --BORDER-RAD: 3.125rem;
+    --INTRO-BW: 31.25rem;  /* BW = box-width */
+    --ABOUT-BW: 37.5rem;  
+    --ABOUT--GAP: 7.5rem;
+}
+body {
+    font-family: var(--FF);
+    font-size: var(--FS);
+    color: var(--FC);
+    background-image: linear-gradient(var(--RADIAL-BGCOLOR), var(--BGCOLOR));
+    min-height: 100vh;
+}
+/* || HEADER || */
+header {
+    font-size: 0.8rem;
+    background-color:#202020;
+    min-width: max-content;
+    height: 3.75rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 5rem;
+    position: fixed;  /* Holds header bar in place */
+    top: 0;  /* Keeps header bar at top of page */
+    left: 0;  /* Keeps header bar anchored to the left side of the page */
+    width: 100%;  /* Stretches header bar across entire viewport */
+    z-index: 10;  /* Ensures it stays on top layer of page (z-axis) */
+}
+#nav {
+    list-style-type: none;  /* Removes bullets */
+    display: flex;
+    gap: 2.5rem;
+}
+/* || NAV LINKS || */
+a, a:visited {
+    color: whitesmoke;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover, a:focus {
+    color: white;
+}
+a:active {
+    color: rgba(255, 255, 255, 0.575);
+}
+/* || HR || */
+hr {
+    border: none;
+    height: 2px;
+    background-color: var(--GEN-SECCOLOR);
+    width: 100%;
+}
+#hrDivider {
+    margin-top: 12vh;
+    min-width: 82.5rem;
+    left: 0;
+}
+/* || MAIN || */
+main {
+    margin-top: 4vh;
+    padding-top: 3.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#title {
+    color: var(--GEN-SECCOLOR);
+    font-size: var(--FS-BIG);
+    margin-bottom: 4vh;
+}
+#selectors {
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+}
+.selector {
+    color: var(--FC);
+    font-size: 1.563rem;
+    width: 25rem;
+    height: 3.75rem;
+    border: 2px solid;
+    border-radius: var(--BORDER-RAD);
+    text-align: center;
+    place-content: center;
+}
+#btnDev {
+    border-color: var(--DEV-SECCOLOR);
+    background-color: transparent;
+}
+#btnMus {
+    border-color: var(--MUS-SECCOLOR);
+    background-color: transparent;
+}
+#btnSoft {
+    border-color: var(--GEN-SECCOLOR);
+    background-color: transparent;
+}
