@@ -2,10 +2,11 @@
 <html lang="en-us">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Evan Brentson">
-        <meta name="description" content="This page is about Evan Brentson's skills.">
+        <meta name="description" content="This webpage is about Evan Brentson's skills.">
         <title>Evan Brentson's Skills</title>
-        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">  <!-- ADD WEBSITE ICON HERE ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
         <link rel="stylesheet" href="../css/skills.css">
     </head>
     <body>
@@ -13,27 +14,489 @@
         <header>
             <ul id="nav">
                 <!-- HOME LINK -->
-                <li><a href="#">HOME</a></li>
+                <li><a href="default.html" onclick="setState(false)">HOME</a></li>
                 <!-- ABOUT ME LINK -->
-                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="default.html#hrDivider" onclick="setState(false)">ABOUT</a></li>
                 <!-- SWE PORTFOLIO LINK -->
-                <li><a href="swe-portfolio.html">PORTFOLIO</a></li>
+                <li id="port"><p>PORTFOLIO &#x25BC;</p>
+                    <ul id="dropdown">
+                        <li><a href="portfolioDev.html">DEVELOPMENT</a></li>
+                        <li><a href="portfolioMus.html">MUSIC</a></li>
+                    </ul>
+                </li>
                 <!-- MUSICAL EXPERIENCE-->
-                <li><a href="musical-experience.html">SKILLS</a></li>
+                <li><a href="#">SKILLS</a></li>
                 <!--  LESSONS -->
-                <li><a href="">LESSONS</a></li>
+                <li><a href="lessonsTemp.html">LESSONS</a></li>
                 <!-- CONTACT -->
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </header>
         <main>
-            <h1 id="title">Skills</h1>
+            <h1 class="titles">Skills</h1>
             <hr>
-            <section id="selectors">
-                <button id="btnDev" class="selector">Software Engineering</button>
-                <button id="btnMus" class="selector">Music</button>
-                <button id="btnSoft" class="selector">Soft-skills</button>
+            <section id="intro">
+                <h3>Click one of the buttons to get a more in-depth description of skills in that area</h3>
+                <div id="selectors">
+                    <button id="devButton" class="box selector devBorder" onclick="selectSkill(this)">Software Engineering</button>
+                    <button id="musButton" class="box selector musBorder" onclick="selectSkill(this)">Music</button>
+                    <button id="softButton" class="box selector softBorder" onclick="selectSkill(this)">Soft-skills</button>
+                </div>
+            </section>
+            <hr>
+
+
+
+
+            <section id="blurbGen">
+                <h1 class="titles blurbTitles">Overview</h1>
+                <div class="blurbs">
+                    <div class="column">
+                        <!-- ADD <abbr> TAGS TO ALL ABBREVIATIONS AND MORE SEPCIFIC VOCABULARY (LIKE DEMOCRATIC AND SERVENT LEADERSHIP STYLES) -->
+                        <article id="gen1" class="box blurb devBorder">
+                            <h3>Web-Development</h3>
+                            <div class="content">
+                                <p class="opener">Very comfortable with HTML and CSS syntax and general webpage design patterns. Capable of building websites from scratch w/o the use of frameworks.</p>
+                                <p class="complete">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa molestiae commodi ullam aut iure totam. Facilis, voluptate? Ipsum facere, sequi aspernatur tempore sapiente repellat labore, a quisquam aperiam eaque impedit.</p>
+                            </div>
+                        </article>
+                        <article id="gen4" class="box blurb devBorder">
+                            <h3>JavaScript</h3>
+                            <div class="content">
+                                <p class="opener">Proficient with JavaScript syntax and dynamic programming concepts. Familiar with jQuery, jQuery UI, React, Next.js. and Vue frameworks. Practiced working in browsers in Node.js environment. Experienced working in general front-end development.</p>
+                                <p class="complete">This is just a test</p>
+                            </div>
+                        </article>
+                        <article id="gen7" class="box blurb devBorder">
+                            <h3>Java</h3>
+                            <div class="content">
+                                <p class="opener">Proficient with Java Syntax and OOPs concepts. Practiced with Java Collections API, Java Database Connectivity (JDBC), Hibernate, and Spring/Spring Boot frameworks. Versed in back-end development, including SQL (MySQL), databases, and database integration. Experienced working in general back-end development.</p>
+                                <p class="complete">This is just a test</p>
+                            </div>
+                        </article>
+                        <article id="gen10" class="box blurb devBorder">
+                            <h3>Data Structures, Algorithms, and Git</h3>
+                            <div class="content">
+                                <p class="opener">Knowledgeable of various data structures and algorithms, the benefits and drawbacks of each, and how to create them from scratch (if necessary). Also familiar with Git version control (GitHub) and how to manage local and remote repositories.</p>
+                                <p class="complete">This is just a test</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="column">
+                        <article id="gen2" class="box blurb musBorder">
+                            <h3>Percussion</h3>
+                            <div class="content">
+                                <p class="opener">Skilled with all manners of percussion. Excellent with rudimental drumming and 4-mallet playing. Proficient in Timpani, drum-kit, hand-drums, and most auxiliary instruments.</p>
+                                <p class="complete">This is just a test</p>
+                            </div>
+                        </article>
+                        <article id="gen5" class="box blurb musBorder">
+                            <h3>Genres</h3>
+                            <div class="content">
+                                <p class="opener">Highly trained in marching, concert and contemporary genres, and experienced in orchestral, jazz, and rock settings.</p>
+                                <p class="complete">This is just a test</p>
+                            </div>
+                        </article>
+                        <article id="gen8" class="box blurb musBorder">
+                            <h3>Music theory</h3>
+                            <div class="content">
+                                <p class="opener">Trained in western classical music theory and ear training. Knowledgeable of scales, modes, harmonic progressions, part-writing, patterns (and pattern recognition) musical analysis, atonal concepts and more. Capable of composing music, especially that of marching battery and drumline</p>
+                                <p class="complete">This is just a test</p>
+                            </div>
+                        </article>
+                        <article id="gen11" class="box blurb musBorder">
+                            <h3>Teaching</h3>
+                            <div class="content">
+                                <p class="opener">Experienced teaching students between ages 11 – 21 percussion performance and musical theory in middle school, high school, and college settings. Most proficient in the marching or concert genre of performance.</p>
+                                <p class="complete">This is just a test</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="column">
+                        <article id="gen3" class="box blurb softBorder">
+                            <h3>Leadership</h3>
+                            <div class="content">
+                                <p class="opener">Enacts of strategy of dynamic leadership, adapting approach based on situation or people involved, but prefers a democratic & servant style. Leads through respect, not through fear. Tons of experience in leadership roles and official positions in business & music. </p>
+                                <p class="complete">This is just a test</p>
+                            </div>
+                        </article>
+                        <article id="gen6" class="box blurb softBorder">
+                            <h3>Problem-solving</h3>
+                            <div class="content">
+                                <p class="opener">Capable problem solver in several settings, be it development, music, business, academic, or even social / personal affairs. Always seeking a healthy solution to any problem thought innovation.</p>
+                                <p class="complete">This is just a test</p>
+                            </div>
+                        </article>
+                        <article id="gen9" class="box blurb softBorder">
+                            <h3>Teamwork</h3>
+                            <div class="content">
+                                <p class="opener">Un-paralleled teamwork skills in any setting,  any position, and under any management/leader. Tons of experience constantly working positively with others in nearly every setting, including music, business, and home-life.</p>
+                                <p class="complete">This is just a test</p>
+                            </div>
+                        </article>
+                        <article id="gen12" class="box blurb softBorder">
+                            <h3>Emotional Intelligence</h3>
+                            <div class="content">
+                                <p class="opener">Very self-aware of personal mood and capable of acting accordingly in social settings. Also, capably aware of other’s mental / emotional state and how to generally approach situations that might involve them. Always holds a “no-drama / non-toxic” attitude.</p>
+                                <p class="complete">This is just a test</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+<!-- || SOFTWARE ENGINEERING SKILLS || -->
+
+
+
+
+            <section id="blurbDev">
+                <h1 class="titles blurbTitles">Overview</h1>
+                <div class="blurbs">
+                    <div class="column">
+                        <!-- ADD <abbr> TAGS TO ALL ABBREVIATIONS AND MORE SEPCIFIC VOCABULARY (LIKE DEMOCRATIC AND SERVENT LEADERSHIP STYLES) -->
+                        <article id="dev1" class="box blurb devBorder">
+                            <h3>Web-Development</h3>
+                            <div class="content">
+                                <p class="opener">Very comfortable with HTML and CSS syntax and general webpage design patterns. Capable of building websites from scratch w/o the use of frameworks.</p>
+                                <p id="devComplete1" class="complete">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa molestiae commodi ullam aut iure totam. Facilis, voluptate? Ipsum facere, sequi aspernatur tempore sapiente repellat labore, a quisquam aperiam eaque impedit.</p>
+                                <button class="pulldown" onclick="toggleBlurb('devComplete1', this)">&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="dev4" class="box blurb devBorder">
+                            <h3>JavaScript</h3>
+                            <div class="content">
+                                <p class="opener">Proficient with JavaScript syntax and dynamic programming concepts. Familiar with jQuery, jQuery UI, React, Next.js. and Vue frameworks. Practiced working in browsers in Node.js environment. Experienced working in general front-end development.</p>
+                                <p id="devComplete4" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('devComplete4', this)">&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="dev7" class="box blurb devBorder">
+                            <h3>Java</h3>
+                            <div class="content">
+                                <p class="opener">Proficient with Java Syntax and OOPs concepts. Practiced with Java Collections API, Java Database Connectivity (JDBC), Hibernate, and Spring/Spring Boot frameworks. Versed in back-end development, including SQL (MySQL), databases, and database integration. Experienced working in general back-end development.</p>
+                                <p id="devComplete7" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('devComplete7', this)">&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="dev10" class="box blurb devBorder">
+                            <h3>Data Structures, Algorithms, and Git</h3>
+                            <div class="content">
+                                <p class="opener">Knowledgeable of various data structures and algorithms, the benefits and drawbacks of each, and how to create them from scratch (if necessary). Also familiar with Git version control (GitHub) and how to manage local and remote repositories.</p>
+                                <p id="devComplete10" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('devComplete10', this)">&#x25BC;</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="column">
+                        <article id="dev2" class="box blurb devBorder">
+                            <h3>Percussion</h3>
+                            <div class="content">
+                                <p class="opener">Skilled with all manners of percussion. Excellent with rudimental drumming and 4-mallet playing. Proficient in Timpani, drum-kit, hand-drums, and most auxiliary instruments.</p>
+                                <p id="devComplete2" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('devComplete2', this)">&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="dev5" class="box blurb devBorder">
+                            <h3>Genres</h3>
+                            <div class="content">
+                                <p class="opener">Highly trained in marching, concert and contemporary genres, and experienced in orchestral, jazz, and rock settings.</p>
+                                <p id="devComplete5" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('devComplete5', this)">&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="dev8" class="box blurb devBorder">
+                            <h3>Music theory</h3>
+                            <div class="content">
+                                <p class="opener">Trained in western classical music theory and ear training. Knowledgeable of scales, modes, harmonic progressions, part-writing, patterns (and pattern recognition) musical analysis, atonal concepts and more. Capable of composing music, especially that of marching battery and drumline</p>
+                                <p id="devComplete8" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('devComplete8', this)">&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="dev11" class="box blurb devBorder">
+                            <h3>Teaching</h3>
+                            <div class="content">
+                                <p class="opener">Experienced teaching students between ages 11 – 21 percussion performance and musical theory in middle school, high school, and college settings. Most proficient in the marching or concert genre of performance.</p>
+                                <p id="devComplete11" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('devComplete11', this)">&#x25BC;</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="column">
+                        <article id="dev3" class="box blurb devBorder">
+                            <h3>Leadership</h3>
+                            <div class="content">
+                                <p class="opener">Enacts of strategy of dynamic leadership, adapting approach based on situation or people involved, but prefers a democratic & servant style. Leads through respect, not through fear. Tons of experience in leadership roles and official positions in business & music. </p>
+                                <p id="devComplete3" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('devComplete3', this)">&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="dev6" class="box blurb devBorder">
+                            <h3>Problem-solving</h3>
+                            <div class="content">
+                                <p class="opener">Capable problem solver in several settings, be it development, music, business, academic, or even social / personal affairs. Always seeking a healthy solution to any problem thought innovation.</p>
+                                <p id="devComplete6" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('devComplete6', this)">&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="dev9" class="box blurb devBorder">
+                            <h3>Teamwork</h3>
+                            <div class="content">
+                                <p class="opener">Un-paralleled teamwork skills in any setting,  any position, and under any management/leader. Tons of experience constantly working positively with others in nearly every setting, including music, business, and home-life.</p>
+                                <p id="devComplete9" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('devComplete9', this)">&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="dev12" class="box blurb devBorder">
+                            <h3>Emotional Intelligence</h3>
+                            <div class="content">
+                                <p class="opener">Very self-aware of personal mood and capable of acting accordingly in social settings. Also, capably aware of other’s mental / emotional state and how to generally approach situations that might involve them. Always holds a “no-drama / non-toxic” attitude.</p>
+                                <p id="devComplete12" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('devComplete12', this)">&#x25BC;</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+
+ 
+
+            <!-- || MUSIC SKILLS || -->
+
+
+
+
+            <section id="blurbMus">
+                <h1 class="titles blurbTitles">Overview</h1>
+                <div class="blurbs">
+                    <div class="column">
+                        <!-- ADD <abbr> TAGS TO ALL ABBREVIATIONS AND MORE SEPCIFIC VOCABULARY (LIKE DEMOCRATIC AND SERVENT LEADERSHIP STYLES) -->
+                        <article id="mus1" class="box blurb musBorder">
+                            <h3>Web-Development</h3>
+                            <div class="content">
+                                <p class="opener">Very comfortable with HTML and CSS syntax and general webpage design patterns. Capable of building websites from scratch w/o the use of frameworks.</p>
+                                <p id="musComplete1" class="complete">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa molestiae commodi ullam aut iure totam. Facilis, voluptate? Ipsum facere, sequi aspernatur tempore sapiente repellat labore, a quisquam aperiam eaque impedit.</p>
+                                <button class="pulldown" onclick="toggleBlurb('musComplete1', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="mus4" class="box blurb musBorder">
+                            <h3>JavaScript</h3>
+                            <div class="content">
+                                <p class="opener">Proficient with JavaScript syntax and dynamic programming concepts. Familiar with jQuery, jQuery UI, React, Next.js. and Vue frameworks. Practiced working in browsers in Node.js environment. Experienced working in general front-end development.</p>
+                                <p id="musComplete4" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('musComplete4', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="mus7" class="box blurb musBorder">
+                            <h3>Java</h3>
+                            <div class="content">
+                                <p class="opener">Proficient with Java Syntax and OOPs concepts. Practiced with Java Collections API, Java Database Connectivity (JDBC), Hibernate, and Spring/Spring Boot frameworks. Versed in back-end development, including SQL (MySQL), databases, and database integration. Experienced working in general back-end development.</p>
+                                <p id="musComplete7" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('musComplete7', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="mus10" class="box blurb musBorder">
+                            <h3>Data Structures, Algorithms, and Git</h3>
+                            <div class="content">
+                                <p class="opener">Knowledgeable of various data structures and algorithms, the benefits and drawbacks of each, and how to create them from scratch (if necessary). Also familiar with Git version control (GitHub) and how to manage local and remote repositories.</p>
+                                <p id="musComplete10" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('musComplete10', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="column">
+                        <article id="mus2" class="box blurb musBorder">
+                            <h3>Percussion</h3>
+                            <div class="content">
+                                <p class="opener">Skilled with all manners of percussion. Excellent with rudimental drumming and 4-mallet playing. Proficient in Timpani, drum-kit, hand-drums, and most auxiliary instruments.</p>
+                                <p id="musComplete2" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('musComplete2', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="mus5" class="box blurb musBorder">
+                            <h3>Genres</h3>
+                            <div class="content">
+                                <p class="opener">Highly trained in marching, concert and contemporary genres, and experienced in orchestral, jazz, and rock settings.</p>
+                                <p id="musComplete5" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('musComplete5', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="mus8" class="box blurb musBorder">
+                            <h3>Music theory</h3>
+                            <div class="content">
+                                <p class="opener">Trained in western classical music theory and ear training. Knowledgeable of scales, modes, harmonic progressions, part-writing, patterns (and pattern recognition) musical analysis, atonal concepts and more. Capable of composing music, especially that of marching battery and drumline</p>
+                                <p id="musComplete8" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('musComplete8', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="mus11" class="box blurb musBorder">
+                            <h3>Teaching</h3>
+                            <div class="content">
+                                <p class="opener">Experienced teaching students between ages 11 – 21 percussion performance and musical theory in middle school, high school, and college settings. Most proficient in the marching or concert genre of performance.</p>
+                                <p id="musComplete11" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('musComplete11', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="column">
+                        <article id="mus3" class="box blurb musBorder">
+                            <h3>Leadership</h3>
+                            <div class="content">
+                                <p class="opener">Enacts of strategy of dynamic leadership, adapting approach based on situation or people involved, but prefers a democratic & servant style. Leads through respect, not through fear. Tons of experience in leadership roles and official positions in business & music. </p>
+                                <p id="musComplete3" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('musComplete3', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="mus6" class="box blurb musBorder">
+                            <h3>Problem-solving</h3>
+                            <div class="content">
+                                <p class="opener">Capable problem solver in several settings, be it development, music, business, academic, or even social / personal affairs. Always seeking a healthy solution to any problem thought innovation.</p>
+                                <p id="musComplete6" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('musComplete6', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="mus9" class="box blurb musBorder">
+                            <h3>Teamwork</h3>
+                            <div class="content">
+                                <p class="opener">Un-paralleled teamwork skills in any setting,  any position, and under any management/leader. Tons of experience constantly working positively with others in nearly every setting, including music, business, and home-life.</p>
+                                <p id="musComplete9" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('musComplete9', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="mus12" class="box blurb musBorder">
+                            <h3>Emotional Intelligence</h3>
+                            <div class="content">
+                                <p class="opener">Very self-aware of personal mood and capable of acting accordingly in social settings. Also, capably aware of other’s mental / emotional state and how to generally approach situations that might involve them. Always holds a “no-drama / non-toxic” attitude.</p>
+                                <p id="musComplete12" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('musComplete12', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            
+
+
+            <!-- || SOFT SKILLS || -->
+
+
+
+            
+            <section id="blurbSoft">
+                <h1 class="titles blurbTitles">Overview</h1>
+                <div class="blurbs">
+                    <div class="column">
+                        <!-- ADD <abbr> TAGS TO ALL ABBREVIATIONS AND MORE SEPCIFIC VOCABULARY (LIKE DEMOCRATIC AND SERVENT LEADERSHIP STYLES) -->
+                        <article id="soft1" class="box blurb softBorder">
+                            <h3>Web-Development</h3>
+                            <div class="content">
+                                <p class="opener">Very comfortable with HTML and CSS syntax and general webpage design patterns. Capable of building websites from scratch w/o the use of frameworks.</p>
+                                <p id="softComplete1" class="complete">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa molestiae commodi ullam aut iure totam. Facilis, voluptate? Ipsum facere, sequi aspernatur tempore sapiente repellat labore, a quisquam aperiam eaque impedit.</p>
+                                <button class="pulldown" onclick="toggleBlurb('softComplete1', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="soft4" class="box blurb softBorder">
+                            <h3>JavaScript</h3>
+                            <div class="content">
+                                <p class="opener">Proficient with JavaScript syntax and dynamic programming concepts. Familiar with jQuery, jQuery UI, React, Next.js. and Vue frameworks. Practiced working in browsers in Node.js environment. Experienced working in general front-end development.</p>
+                                <p id="softComplete4" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('softComplete4', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="soft7" class="box blurb softBorder">
+                            <h3>Java</h3>
+                            <div class="content">
+                                <p class="opener">Proficient with Java Syntax and OOPs concepts. Practiced with Java Collections API, Java Database Connectivity (JDBC), Hibernate, and Spring/Spring Boot frameworks. Versed in back-end development, including SQL (MySQL), databases, and database integration. Experienced working in general back-end development.</p>
+                                <p id="softComplete7" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('softComplete7', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="soft10" class="box blurb softBorder">
+                            <h3>Data Structures, Algorithms, and Git</h3>
+                            <div class="content">
+                                <p class="opener">Knowledgeable of various data structures and algorithms, the benefits and drawbacks of each, and how to create them from scratch (if necessary). Also familiar with Git version control (GitHub) and how to manage local and remote repositories.</p>
+                                <p id="softComplete10" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('softComplete10', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="column">
+                        <article id="soft2" class="box blurb softBorder">
+                            <h3>Percussion</h3>
+                            <div class="content">
+                                <p class="opener">Skilled with all manners of percussion. Excellent with rudimental drumming and 4-mallet playing. Proficient in Timpani, drum-kit, hand-drums, and most auxiliary instruments.</p>
+                                <p id="softComplete2" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('softComplete2', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="soft5" class="box blurb softBorder">
+                            <h3>Genres</h3>
+                            <div class="content">
+                                <p class="opener">Highly trained in marching, concert and contemporary genres, and experienced in orchestral, jazz, and rock settings.</p>
+                                <p id="softComplete5" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('softComplete5', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="soft8" class="box blurb softBorder">
+                            <h3>Music theory</h3>
+                            <div class="content">
+                                <p class="opener">Trained in western classical music theory and ear training. Knowledgeable of scales, modes, harmonic progressions, part-writing, patterns (and pattern recognition) musical analysis, atonal concepts and more. Capable of composing music, especially that of marching battery and drumline</p>
+                                <p id="softComplete8" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('softComplete8', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="soft11" class="box blurb softBorder">
+                            <h3>Teaching</h3>
+                            <div class="content">
+                                <p class="opener">Experienced teaching students between ages 11 – 21 percussion performance and musical theory in middle school, high school, and college settings. Most proficient in the marching or concert genre of performance.</p>
+                                <p id="softComplete11" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('softComplete11', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="column">
+                        <article id="soft3" class="box blurb softBorder">
+                            <h3>Leadership</h3>
+                            <div class="content">
+                                <p class="opener">Enacts of strategy of dynamic leadership, adapting approach based on situation or people involved, but prefers a democratic & servant style. Leads through respect, not through fear. Tons of experience in leadership roles and official positions in business & music. </p>
+                                <p id="softComplete3" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('softComplete3', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="soft6" class="box blurb softBorder">
+                            <h3>Problem-solving</h3>
+                            <div class="content">
+                                <p class="opener">Capable problem solver in several settings, be it development, music, business, academic, or even social / personal affairs. Always seeking a healthy solution to any problem thought innovation.</p>
+                                <p id="softComplete6" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('softComplete6', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="soft9" class="box blurb softBorder">
+                            <h3>Teamwork</h3>
+                            <div class="content">
+                                <p class="opener">Un-paralleled teamwork skills in any setting,  any position, and under any management/leader. Tons of experience constantly working positively with others in nearly every setting, including music, business, and home-life.</p>
+                                <p id="softComplete9" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('softComplete9', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                        <article id="soft12" class="box blurb softBorder">
+                            <h3>Emotional Intelligence</h3>
+                            <div class="content">
+                                <p class="opener">Very self-aware of personal mood and capable of acting accordingly in social settings. Also, capably aware of other’s mental / emotional state and how to generally approach situations that might involve them. Always holds a “no-drama / non-toxic” attitude.</p>
+                                <p id="softComplete12" class="complete">This is just a test</p>
+                                <button class="pulldown" onclick="toggleBlurb('softComplete12', this)" >&#x25BC;</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
             </section>
         </main>
+        <script src="../js/utility.js"></script>
+        <script src="../js/skill.js"></script>
     </body>
 </html>

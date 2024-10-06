@@ -2,10 +2,11 @@
 <html lang="en-us">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Evan Brentson">
         <meta name="description" content="This website is about Evan Brentson's journey through software development and music.">
         <title>Evan Brentson's Website</title>
-        <link rel="icon" href="" type="image/x-icon">
+        <link rel="icon" href="" type="image/x-icon">  <!-- ADD WEBSITE ICON HERE ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
         <link rel="stylesheet" href="../css/default.css">
     </head>
     <body>
@@ -13,15 +14,20 @@
         <header>
             <ul id="nav">
                 <!-- HOME LINK -->
-                <li><a href="#">HOME</a></li>
+                <li><a href="#" onclick="setState(false)">HOME</a></li>
                 <!-- ABOUT ME LINK -->
-                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="#hrDivider" onclick="setState(false)">ABOUT</a></li>
                 <!-- SWE PORTFOLIO LINK -->
-                <li><a href="swe-portfolio.html">PORTFOLIO</a></li>
+                <li id="port"><p>PORTFOLIO &#x25BC;</p>
+                    <ul id="dropdown">
+                        <li><a href="portfolioDev.html">DEVELOPMENT</a></li>
+                        <li><a href="portfolioMus.html">MUSIC</a></li>
+                    </ul>
+                </li>
                 <!-- MUSICAL EXPERIENCE-->
-                <li><a href="musical-experience.html">SKILLS</a></li>
+                <li><a href="skills.html">SKILLS</a></li>
                 <!--  LESSONS -->
-                <li><a href="">LESSONS</a></li>
+                <li><a href="lessonsTemp.html">LESSONS</a></li>
                 <!-- CONTACT -->
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
@@ -30,13 +36,13 @@
             <article id="intro">  <!-- Opening Content -->
                     <div id="introLeft">    
                         <div id="greet">
-                            <h1 class="title">Evan Brentson</h1>
-                            <hr>
+                            <h1 id="name" class="title"><span id="hi">👋 Hi!</span> <span id="myNameIs">My name is...</span></h1>
+                            <hr id="titleHr">
                             <p>
-                                <span class="subTitles">Developer</span>
-                                <span class="subTitles">Musician</span>
-                                <span class="subTitles">Teacher</span>
-                                <span class="subTitles">Leader</span>
+                                <span id="dev" class="subTitles">Developer</span>
+                                <span id="mus" class="subTitles">Musician</span>
+                                <span id="teach" class="subTitles">Teacher</span>
+                                <span id="lead" class="subTitles">Leader</span>
                             </p>
                         </div>
                         <div id="btnLinks">
@@ -75,7 +81,7 @@
                         <br>
                         <p>Evan’s mission in software development requires that he is always learning. With a rapidly changing tech industry, he keeps an eye out for new concepts or practices to learn and grow his skillset so he can stay ahead of the curve.</p>
                         <br>
-                        <p>As for music, Evan believes his experiences as a musician are responsible for much of his growth as an individual. Regardless of his love for percussion and performing, music is a powerful opportunity to learn from and collaborate with others, improving skills in teamwork, creativity, and other qualities not easily learned while working at a desk.</p>
+                        <p>As for music, Evan believes his experiences as a musician are responsible for much of his growth as an individual. Regardless of his love for percussion and performing, music is a powerful opportunity to learn from and collaborate with others, improving skills in teamwork, creativity, and other qualities not typically learned while working at a desk.</p>
                     </div>
                     <div class="blockAlt">
                         <h2>
@@ -96,15 +102,17 @@
                         <p id="lastP">If you want to delve more into Evan's experiences or sevices, click on one of the links below.</p>
                         <br>
                         <div id="bottomBtns">
-                            <a id="sk" class="bottomBtn" href="">Skills</a>
-                            <a id="sw" class="bottomBtn" href="">SWE Portfolio</a>
-                            <a id="me" class="bottomBtn" href="">Music Experience</a>
-                            <a id="le" class="bottomBtn" href="">Lessons</a>
-                            <a id="co" class="bottomBtn" href="">Contact</a>
+                            <a id="sk" class="bottomBtn" href="skills.html">Skills</a>
+                            <a id="sw" class="bottomBtn" href="portfolioDev.html">SWE Portfolio</a>
+                            <a id="me" class="bottomBtn" href="portfolioMus.html">Music Experience</a>
+                            <a id="le" class="bottomBtn" href="lessonsTemp.html">Lessons</a>
+                            <a id="co" class="bottomBtn" href="contact.html">Contact</a>
                         </div>
                     </div>
                 </section>
             </article>
         </main>
+        <script src="../js/utility.js"></script>
+        <script src="../js/default.js"></script>
     </body>
 </html>

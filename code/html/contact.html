@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Evan Brentson">
+        <meta name="description" content="This webpage is for contacting Evan Brentson">
+        <title>Contact Evan Brentson</title>
+        <link rel="icon" href="" type="image/x-icon">  <!-- ADD WEBSITE ICON HERE ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+        <link rel="stylesheet" href="../css/contact.css">
+    </head>
+    <body>
+        <!-- // HEADER NAVIGATION BAR // -->
+        <header>
+            <ul id="nav">
+                <!-- HOME LINK -->
+                <li><a href="default.html" onclick="setState(false)">HOME</a></li>
+                <!-- ABOUT ME LINK -->
+                <li><a href="default.html#hrDivider" onclick="setState(false)">ABOUT</a></li>
+                <!-- SWE PORTFOLIO LINK -->
+                <li id="port"><p>PORTFOLIO &#x25BC;</p>
+                    <ul id="dropdown">
+                        <li><a href="portfolioDev.html">DEVELOPMENT</a></li>
+                        <li><a href="portfolioMus.html">MUSIC</a></li>
+                    </ul>
+                </li>
+                <!-- MUSICAL EXPERIENCE-->
+                <li><a href="skills.html">SKILLS</a></li>
+                <!--  LESSONS -->
+                <li><a href="lessonsTemp.html">LESSONS</a></li>
+                <!-- CONTACT -->
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </header>
+        <main>
+            <form action="https://api.web3forms.com/submit" method="POST">  <!-- Posts to Web3 to forward message to email -->
+                <div>
+                    <h2 id="title">Get in touch</h2>
+                </div>
+                <input type="hidden" name="access_key" value="a97cc0f4-a8a2-4b49-aefd-3cced3f1d746">  <!-- Web3 Forms Access key -->
+                <input type="text" name="name" placeholder="Your Name" id="name" class="inputs" required>
+                <input type="email" name="email" placeholder="Your email" id="email" class="inputs" required>
+                <textarea name="message" placeholder="Your message..." class="inputs" required></textarea>
+                <button type="submit" class="inputs">Submit &rarr;</button>
+            </form>
+        </main>
+        <script src="../js/utility.js"></script>
+    </body>
+</html>
