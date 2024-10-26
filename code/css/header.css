@@ -1,0 +1,48 @@
+header {
+    font-size: 0.8rem;
+    background-color:#202020;
+    min-width: max-content;
+    height: 3.75rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+ul {
+    list-style: none;  /* Removes bullets */
+}
+#nav {
+    display: flex;
+    gap: 2.5rem;
+}
+#dropdown {
+    font-size: 0.8rem;
+    background: #202020;
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    position: absolute;
+    z-index: 11;
+    display: none;
+    transform: translateX(-0.5rem);
+}
+ul li:hover ul#dropdown, #dropdown li a:hover {
+    display: block;
+}
+ul li ul li {
+    padding-top: 1rem;
+}
+a, a:visited, li p {
+    color: whitesmoke;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover, a:focus, li p:hover, li p:focus {
+    color: rgba(255, 255, 255, 0.75);
+}
+a:active {
+    color: rgba(255, 255, 255, 0.575);
+}

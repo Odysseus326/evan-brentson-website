@@ -7,7 +7,9 @@
         <meta name="description" content="This webpage displays Evan Brentson's portfolio of Development work.">
         <title>Evan Brentson's Dev Portfolio</title>
         <link rel="icon" href="" type="image/x-icon">
-        <link rel="stylesheet" href="../css/portfolioDev.css">
+        <link rel="stylesheet" href="../css/foundation.css">
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/portfolio.css">
     </head>
     <body>
         <!-- // HEADER NAVIGATION BAR // -->
@@ -27,13 +29,102 @@
                 <!-- MUSICAL EXPERIENCE-->
                 <li><a href="skills.html">SKILLS</a></li>
                 <!--  LESSONS -->
-                <li><a href="lessonsTemp.html">LESSONS</a></li>
+                <li><a onclick="lessons()">LESSONS</a></li>
                 <!-- CONTACT -->
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </header>
         <main>
+            <article id="portfolio">
+                <h1 id="devTitle" class="titles">Developer Portfolio</h1>
+                <hr class="devHr">
+                <section class="blocks">
+                    <div class="box blockText devBlockText devBg1">
+                            <p>Evan’s newest foray into software development involves combining his passion for development with his passion for music. Being as incredibly involved with the Washington state music community as Evan is, he has a very high level of understanding of the needs and wants of those within it. This includes the desires of educators, students, and hobbyists at all levels of skill. This also likely applies to communities outside of the Washington music community.</p>
+                            <br>
+                            <p>He is building an application that would conveniently connect music educators and aspiring music students. The goal is to give freelance educators a more standardized platform to work with their students. This would be dedicated solely for music educators and their studio of students because of the unique dynamics that private musical lessons compared to other academic areas.</p>
+                            <br>
+                            <p>Evan plans to use this website as an opportunity to learn more about popular frameworks & tech relevant to the JavaScript space. This project is still in early-development.</p>
+                    </div>
+                    <figure>
+                        <h3>Music Education Software Service (Unnamed)</h3>
+                        <img id="unnamed" src="../imgs/musicsite.png" alt=""></img>
+                        <figcaption><p>A mock-up of the home page for the music education service.</p></figcaption>
+                    </figure>
+                </section>
+
+                <hr class="devHr">
+
+                <section class="blocks">
+                    <figure>
+                        <h3>Personal Website</h3>
+                        <img id="personalWebsite"src="../imgs/PW.png" alt="Excerpts of code for this website"></img>
+                        <figcaption><p>Some of the <abbr title="Hypertext Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> and JavaScript code for this website.</p></figcaption>
+                    </figure>
+                    <div class="box blockText devBlockText devBg2">
+                            <p>This Website is Evan’s first practical solo project to be completed. It features a personally designed and fully featured front-end user experience, including animations, menus, synchronous & asynchronous functions, and other dynamic features.</p>
+                            <br>
+                            <p>Evan created this website using pure <abbr title="Hypertext Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr> and JavaScript without the use of any framework or external APIs (except a single external font) with the goal of proving that he can build a website completely from scratch, using only his knowledge of these languages and fundamental programming practices.</p>
+                            <br>
+                            <p>He also used it as an opportunity to help fill the gaps in his knowledge by creating problems he had never worked on before and figuring out how to solve it with his problem-solving and research skills. He intentionally chose not to use frameworks because he felt he would not receive the fundamental experience he gained while building without them.</p>
+                            <br>
+                            <p>Evan’s style of coding boasts a clean and descriptive look in each of the languages, where necessary code is reused in such a way that overall lines of code are reduced but doesn’t over-abstract, making it easier for others to understand. Comments for functions in JavaScript are designed to help developers understand them, selectors in <abbr title="Cascading Style Sheets">CSS</abbr> are labeled for purpose and precision, and <abbr title="Hypertext Markup Language">HTML</abbr> semantics are very intentionally used to promote easy readability.</p>
+                            <br>
+                            <p>This website serves as Evan’s personal online portfolio for both music and Software Engineering and will continue to provide this function for the foreseeable future. It also serves as an opportunity to gain future experience by studying, maintaining and updating old code when necessary.</p>
+                    </div>
+                </section>
+
+                <hr class="devHr">
+
+                <section class="blocks">
+                    <div class="box blockText devBlockText devBg3">
+                            <p>This was Evan’s first website, intended as a learning opportunity. Built purely from <abbr title="Hypertext Markup Language">HTML</abbr>, he learned the fundamentals of <abbr title="Hypertext Markup Language">HTML</abbr> through hands on experience.</p>
+                            <br>
+                            <p>While learning about the many features core <abbr title="Hypertext Markup Language">HTML</abbr> offers, Evan was able to implement forms, links, images, menus (drop-down, multiple choice, etc.), other file sources, and more. He also learned with accessibility in mind. and how to write with clean semantics, utilizing all block-level elements and comments to help guide other developers. This website attempts to make a practical implementation of nearly every feature offered in <abbr title="Hypertext Markup Language">HTML</abbr>.</p>
+                            <br>
+                            <p>Although he prefers deferring code to separate <abbr title="Cascading Style Sheets">CSS</abbr> and JavaScript files, when necessary, Evan is fully capable of writing the features of a webpage all in <abbr title="Hypertext Markup Language">HTML</abbr> documents.</p>
+                    </div>
+                    <figure>
+                        <h3>First Website</h3>
+                        <img id="firstWebpage" src="../imgs/FW.png" alt=""></img>
+                        <figcaption><p>A portion of Evan's first website written on nothing but <abbr title="Hypertext Markup Language">HTML</abbr> (and slight <abbr title="Cascading Style Sheets">CSS</abbr>).</p></figcaption>
+                    </figure>
+                </section>
+
+                <hr class="devHr">
+
+                <section class="blocks">
+                    <figure>
+                        <h3>"Landscape" Landlord Project</h3>
+                        <img id="landscape" src="../imgs/LS.png" alt=""></img>
+                        <figcaption><p>Portion of the MySQL <abbr title="database">DB</abbr> model code for Landscape's back end</p></figcaption>
+                    </figure>
+                    <div class="box blockText devBlockText devBg4">
+                            <p>“Landscape” was one of Evan’s first ideas he had for a full-stack application that he wanted to build. Evan is acting landlord of a house with several roommates and pets. He collects and handles finances, deals with repairs and maintenance, and other activities. It would be practical for him to make an application that would support his endeavors as landlord. “Landscape” was an idea for an application that would allow Evan to easily perform <abbr title="create, read, update, delete">CRUD</abbr> operations in a database for things related to his job as landlord.</p>
+                            <br>
+                            <p>The project is still a work in progress. The database model was built in MySQL (more information in the next portfolio piece), and a back end was built using the Java programming language, along with support from the Spring, Hibernate, and <abbr title="Jave Database Connectivity">JDBC</abbr> frameworks. Although this project has been temporarily sidelined in favor of working on more favorable projects, further work on this application would include building a front-end UI and fully connecting the database with the back-end Java application. The work Evan has put into this project includes code with a very clean and readable level of abstraction, using classes and local methods for emulating database storage and <abbr title="create, read, update, delete">CRUD</abbr> operations.</p>
+                    </div>
+                </section>
+
+                <hr class="devHr">
+
+                <section class="blocks">
+                    <div class="box blockText devBlockText devBg1">
+                            <p>After Evan learned how to work with relational databases (MySQL), he wanted to create a database that would help him track information about his tenants. This information includes names, license plates, ID numbers, as well as past payments, each of which are broken down into its itemized portions, and more.</p>
+                            <br>
+                            <p>He built it with the intention of tables being segmented based on its practical use. There would be a general table that included common information about each tenant like name, contact information, license plate number, etc. Another table would contain  a description of their car, such as make, model, and color. These two tables, and other later created tables would be linked by a foreign key via the license plate number or some other Identification number. Another table also exists to correlate the amount a tenant has paid in a certain billing-period, and for what bill that payment applies to. Each Tenant also has their own table where all their itemized bills are located along with their total for that billing period.</p>
+                            <br>
+                            <p>Evan currently uses this database as a means of storing long-term data that is relatively unchanging (like names, cars, security deposits, etc.) until he creates an application, where it will be used more regularly.</p>
+                    </div>
+                    <figure>
+                        <h3>Personal Landlord MySQL Database</h3>
+                        <img id="landlordDb" src="../imgs/DB.png" alt=""></img>
+                        <figcaption><p>Tables from Evan's personal MySQL database, viewed on the Windows Command Propt Terminal</p></figcaption>
+                    </figure>
+                </section>
+            </article>
         </main>
         <script src="../js/utility.js"></script>
+        <script src="../js/lessons.js"></script>
     </body>
 </html>

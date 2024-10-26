@@ -1,98 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
-/* BROWSER RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;  /* Sizing includes margin/padding, unlike content-box */
-}
 :root {
-/* || VARIABLES || */
-    /* || GENERAL || */
-    --FF: "Ninito", sans-serif;
-    --FS: 1.5rem;
-    --FS-BIG: 2.5rem;
-    /* || COLORS || */
-    --FC: whitesmoke;
-    --BGCOLOR: #140F2D;
-    --RADIAL-BGCOLOR: #312d46;
-    --GEN-SECCOLOR: #F49D37;  /* General Secondary Color */
-    --DEV-SECCOLOR: #3F88C5;  /* Developer Secondary Color */
-    --MUS-SECCOLOR: #D72638;  /* Music Secondary Color */
-    /* || FORMAT || */
-    --BORDER-RAD: 3.125rem;
-    --INTRO-BW: 31.25rem;  /* BW = box-width */
-    --ABOUT-BW: 37.5rem;  
-    --ABOUT--GAP: 7.5rem;
+    --DEV-MEDCOLOR: #3f89c5ab;
+    --MUS-MEDCOLOR: #d72638a9;
+    --GEN-MEDCOLOR: #f49c37a8;
 }
-body {
-    font-family: var(--FF);
-    font-size: var(--FS);
-    color: var(--FC);
-    background-image: linear-gradient(var(--RADIAL-BGCOLOR), var(--BGCOLOR));
-    min-height: 100vh;
-}
-/* || HEADER || */
-header {
-    font-size: 0.8rem;
-    background-color:#202020;
-    min-width: max-content;
-    height: 3.75rem;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    padding-right: 5rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-}
-ul {
-    list-style: none;  /* Removes bullets */
-}
-#nav {
-    display: flex;
-    gap: 2.5rem;
-}
-#dropdown {
-    font-size: 0.8rem;
-    background: #202020;
-    padding: 0 0.5rem 0.5rem 0.5rem;
-    position: absolute;
-    z-index: 11;
-    display: none;
-    transform: translateX(-0.5rem);
-}
-ul li:hover ul#dropdown, #dropdown li a:hover {
-    display: block;
-}
-ul li ul li {
-    padding-top: 1rem;
-}
-a, a:visited, li p {
-    color: whitesmoke;
-    text-decoration: none;
-    cursor: pointer;
-}
-a:hover, a:focus, li p:hover, li p:focus {
-    color: rgba(255, 255, 255, 0.75);
-}
-a:active {
-    color: rgba(255, 255, 255, 0.575);
-}
-hr {
-    border: none;
-    height: 2px;
-    background-color: var(--GEN-SECCOLOR);
-    width: 100%;
-}
-#hrDivider {
-    margin-top: 12vh;
-    min-width: 82.5rem;
-    left: 0;
-    opacity: 0;
-}
-/* || MAIN || */
+
 main {
     margin: 4vh 0;
     padding-top: 3.75rem;
@@ -101,16 +12,9 @@ main {
     align-items: center;
     gap: 4vh;
 }
-.titles {
-    color: var(--GEN-SECCOLOR);
-    font-size: var(--FS-BIG);
-}
 #intro {
     display: block;
-}
-.box {
-    border: 2px solid;
-    border-radius: var(--BORDER-RAD);
+    text-align: center;
 }
 #selectors {
     margin-top: 2rem;
@@ -119,43 +23,36 @@ main {
     gap: 2.5rem;
 }
 .selector {
-    color: var(--FC);  /* Changes button's font colors */
+    color: var(--FC);
     background-color: transparent;
     font-size: 1.563rem;
     width: 25rem;
     padding: 1.25rem 0;
-    text-align: center;
-    place-content: center;
-}
-.devBorder {
-    border-color: var(--DEV-SECCOLOR);
-}
-.musBorder {
-    border-color: var(--MUS-SECCOLOR);
-}
-.softBorder {
-    border-color: var(--GEN-SECCOLOR);
 }
 #devButton:hover {
-    background-color: #3f89c581;
+    background-color: var(--DEV-DARKCOLOR);
 }
 #musButton:hover {
-    background-color: #d7263883;
+    background-color: var(--MUS-DARKCOLOR);
 }
 #softButton:hover {
-    background-color: #f49c3781;
+    background-color: var(--GEN-DARKCOLOR);
 }
 #devButton:active {
-    background-color: #3f89c5ab;
+    background-color: var(--DEV-MEDCOLOR);
 }
 #musButton:active {
-    background-color: #d72638a9;
+    background-color: var(--MUS-MEDCOLOR);
 }
 #softButton:active {
-    background-color: #f49c37a8;
+    background-color: var(--GEN-MEDCOLOR);
 }
 /* || BLURBs || */
-#blurbGeneral {
+#overview {
+    color: whitesmoke;
+}
+
+#blurbGen {
     display: show;
 }
 #blurbDev {
@@ -167,8 +64,8 @@ main {
 #blurbSoft {
     display: none;
 }
-/* TEMPLATES */
-.blurbTitles {
+/* BLURB TEMPLATES */
+.blurbsTitles {
     text-align: center;
     margin-bottom: 4vh;
 }
@@ -177,7 +74,7 @@ main {
     flex-direction: row;
     gap: 4rem;
 }
-.column {
+.blurbs .column {
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -189,27 +86,21 @@ main {
     line-height: 1.5;
     width: 28.125rem;
     height: max-content;
-    padding: 1.25rem 2.5rem 0.5rem 2.5rem;
-
-    /* FOR TRANSITIONS(?)
-    position: relative;
-    overflow: hidden;
-    transition: height 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    */
+    padding: 1.25rem 2.5rem 0rem 2.5rem;
+    transition-property: height;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
 }
 #blurbGen .blurb {
     padding-bottom: 1.5rem;
 }
-/* SOFTWARE ENGINEERING */
-.devBorder h3 {
+#blurbDev h1, .devBorder h3 {
     color: var(--DEV-SECCOLOR)
 }
-/* MUSIC */
-.musBorder h3 {
+#blurbMus h1, .musBorder h3 {
     color: var(--MUS-SECCOLOR)
 }
-/* SOFT SKILLS */
-.softBorder h3 {
+#blurbSoft h1, .softBorder h3 {
     color: var(--GEN-SECCOLOR)
 }
 .pulldown {
@@ -223,16 +114,10 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*
-    transition: opacity 0.5 ease;
-    */
 }
-/* FOR TRANSITION(?)
-div .opener {
-    opacity: 1;
-}
-*/
-.complete {
-    display: none;
-    transition-duration: 1s;
+.expanded {
+    height: 0;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+    overflow: hidden;
 }

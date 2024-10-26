@@ -1,0 +1,128 @@
+:root {
+    --PORT-BW: 45rem;
+    --PORT-BH: 33.75rem;
+    --PORT-GAP: 2.5rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+#portfolio {
+    width: max-content;  /* Ensures parent container is as big as child containers */
+    margin: 4vh 0;
+    padding: 3.75rem;
+    border-radius: var(--BORDER-RAD);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+#musTitle {  /* Overwrites .titles in foundation.css */
+    color: var(--MUS-SECCOLOR);
+}
+
+#devTitle {  /* Overwrites .titles in foundation.css */
+    color: var(--DEV-SECCOLOR);
+}
+
+p {
+    text-indent: 1em;
+}
+
+section {
+    border-radius: var(--BORDER-RAD);
+    width: max-content;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: var(--PORT-GAP);
+}
+.blockText {
+    width: var(--PORT-BW);
+    line-height: 1.5;
+    padding: 1.25rem 2.5rem;
+}
+
+.devBlockText {
+    border-color: var(--DEV-SECCOLOR);
+}
+.musBlockText {
+    border-color: var(--MUS-SECCOLOR);
+}
+
+figure {
+    max-width: var(--PORT-BW);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+figcaption {
+    font-size: 1rem;
+    font-style: italic;
+}
+img {
+    width: var(--PORT-BW);
+    height: var(--PORT-BH);
+    border: solid 2px var(--GEN-SECCOLOR);
+    border-radius: var(--BORDER-RAD);
+}
+
+.devHr {
+    background-color: var(--DEV-SECCOLOR);
+}
+.musHr {
+    background-color: var(--MUS-SECCOLOR);
+}
+
+/* Height of images is directly relative to the height of the text box (which is dependant of amount of text) */
+#unnamed {
+    height: 682px;
+}
+
+#personalWebsite {
+    height: 1300px;
+}
+
+#firstWebpage {
+    height: 538px;
+}
+
+#landscape {
+    height: 826px;
+}
+
+#landlordDb {
+    height: 862px;
+}
+
+.musBg1 {
+    background-image: linear-gradient(var(--BGCOLOR), #d726381c);
+}
+.musBg2 {
+    background-image: linear-gradient(#d726381c, var(--MUS-DARKCOLOR));
+}
+.musBg3 {
+    background-image: linear-gradient(var(--MUS-DARKCOLOR), #d726381c);
+}
+.musBg4 {
+    background-image: linear-gradient(#d726381c, var(--BGCOLOR));
+}
+.devBg1 {
+    background-image: linear-gradient(var(--BGCOLOR), #3f89c527);
+}
+.devBg2 {
+    background-image: linear-gradient(#3f89c527, var(--DEV-DARKCOLOR));
+}
+.devBg3 {
+    background-image: linear-gradient(var(--DEV-DARKCOLOR), #3f89c527);
+}
+.devBg4 {
+    background-image: linear-gradient(#3f89c527, var(--BGCOLOR));
+}

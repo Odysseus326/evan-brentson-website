@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+/* BROWSER RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* Sizing includes margin/padding, unlike content-box */
+}
+
+:root {
+/* || VARIABLES || */
+    /* || GENERAL || */
+    --FF: "Ninito", sans-serif;
+    --FS: 1.5rem;
+    --FS-BIG: 2.5rem;
+    /* || COLORS || */
+    --FC: whitesmoke;
+    --BGCOLOR: #140F2D;
+    --RADIAL-BGCOLOR: #312d46;
+    --GEN-SECCOLOR: #F49D37;  /* General Secondary Color */
+    --GEN-DARKCOLOR: #f49c3781;
+    --DEV-SECCOLOR: #3F88C5;  /* Developer Secondary Color */
+    --DEV-DARKCOLOR: #3f89c581;
+    --MUS-SECCOLOR: #D72638;  /* Music Secondary Color */
+    --MUS-DARKCOLOR: #d7263883;
+    /* || FORMAT || */
+    --BORDER-RAD: 3.125rem;
+}
+
+body {
+    font-family: var(--FF);
+    font-size: var(--FS);
+    color: var(--FC);
+    background-image: linear-gradient(var(--RADIAL-BGCOLOR), var(--BGCOLOR));
+    min-height: 100vh; /* Stretches background to entire viewport height */
+}
+
+abbr {
+    text-decoration: none;
+}
+
+.gen {
+    color: var(--GEN-SECCOLOR);
+}
+
+.dev {
+    color: var(--DEV-SECCOLOR);
+}
+
+.mus {
+    color: var(--MUS-SECCOLOR);
+}
+
+.titles {
+    font-size: var(--FS-BIG);
+}
+
+.box {
+    border: 2px solid;
+    border-radius: var(--BORDER-RAD);
+}
+
+.devBorder {
+    border-color: var(--DEV-SECCOLOR);
+}
+
+.musBorder {
+    border-color: var(--MUS-SECCOLOR);
+}
+
+.softBorder {
+    border-color: var(--GEN-SECCOLOR);
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: var(--GEN-SECCOLOR);
+    width: 100%;
+}
+
+#hrDivider {
+    margin-top: 12vh;
+    /*min-width: 82.5rem;*/
+    left: 0;
+    opacity: 0;
+}
