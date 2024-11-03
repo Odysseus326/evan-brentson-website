@@ -1,72 +1,49 @@
 :root {
-    --INTRO-BW: 31.25rem;  /* BW = box-width */
-    --ABOUT-BW: 37.5rem;
-    --ABOUT--GAP: 7.5rem;
+    --INTRO-BW: 24rem;  /* BW = box-width */
+    --ABOUT-BW: 25rem; /* 37.5 */
+    --ABOUT--GAP: 5rem;
 }
 
 #intro {
     font-size: var(--FS-BIG);
-    min-width: max-content;
-    margin-top: 12vh;
-    padding-top: 3.75rem;
+    margin: 9.75rem 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 2.5rem;
 }
 
-#introLeft {
+#greet {
     width: var(--INTRO-BW);
     line-height: 2;
+    margin-top: 2.5rem;
 }
 
-#greet {
+#name, .subTitles {
     text-align: center;
-    display: block;
 }
 
 .subTitles {
     display: block;
-    text-align: center;
 }
 
 #headshot {
     width: var(--INTRO-BW);
-    height: var(--INTRO-BW);
-    border: solid 2px var(--GEN-SECCOLOR);
-    border-radius: var(--BORDER-RAD);
-}
-
-#btnLinks {
-    margin-top: 1.25rem;
-    display: flex;
-    flex-direction: row;
-    gap: 2.5rem;
-}
-
-.btnNav {
-    font-size: 1.563rem;
-    width: 25rem;
-    height: 3.75rem;
-    border: 2px solid;
-    border-radius: var(--BORDER-RAD);
-    text-align: center;
-    place-content: center;
-}
-
-#btnDev {
-    border-color: var(--DEV-SECCOLOR);
-}
-
-#btnMus {
-    border-color: var(--MUS-SECCOLOR);
+    border-color: var(--GEN-SECCOLOR);
 }
 
 /* || 'ABOUT ME' SECTION || */
 #about {
-    min-width: max-content;  /* Ensures parent container is as big as child containers */
-    margin: 64px 0 4vh 0;
     opacity: 0;
+}
+
+#aboutTitle {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+#aboutContent {
+    margin: 2.5rem 0 4vh 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -79,78 +56,33 @@
     gap: var(--ABOUT--GAP);
 }
 
+.blockText,
+.blockAlt {
+    width: var(--ABOUT-BW)
+}
+
 .blockText {
-    width: var(--ABOUT-BW);
     border-color: var(--GEN-SECCOLOR);
     line-height: 1.5;
-    padding: 1.25rem 2.5rem;
+    padding: 0.75rem 1.5rem;
 }
 
 .blockAlt {
-    width: var(--ABOUT-BW);
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2.5rem;
-}
-
-#lastBlock {
-    padding-bottom: 1.875rem;
+    gap: 1.5rem;
 }
 
 .quote {
     font-style: italic;
+    font-weight: 1;
     text-align: center;
     display: block;
 }
 
-/* || 'ABOUT ME' IMAGES || */
-.twoImgs {
-    display: flex;
-    gap: 1.25rem;
-}
-
-.horizontalImgs {
-    width: 300px;
-    height: 668px;
-    border-radius: var(--BORDER-RAD);
-}
-
-.verticalImgs {
-    width: 37.5rem;
-    height: 349px;
-    border-radius: var(--BORDER-RAD);
-}
-
-#leftRight {
-    flex-direction: row;
-}
-
-#topBottom {
-    flex-direction: column;
-}
-
-#imgLeft {
-    border: 2px solid var(--DEV-SECCOLOR);
-}
-
-#imgRight {
-    border: 2px solid var(--MUS-SECCOLOR);
-}
-
-#imgTop {
-    border: 2px solid var(--DEV-SECCOLOR);
-}
-
-#imgBottom {
-    border: 2px solid var(--MUS-SECCOLOR);
-}
-
-#lastimg {
-    height: 745px;
-    border: 2px solid var(--GEN-SECCOLOR);
-    border-radius: var(--BORDER-RAD);
+#lastBlock {
+    padding-bottom: 1.125rem;
 }
 
 #lastP {
@@ -158,48 +90,144 @@
     text-align: center;
 }
 
-#bottomBtns {
+/* || 'ABOUT ME' IMAGES || */
+.twoImgs {  /* Pairs of images */
+    display: flex;
+    gap: 0.75rem;
+}
+
+.horizontalImgs {  /* First set of ABOUT pics */
+    width: 12.5rem; /* 300px */
+    height: 27.8333333rem; /* 668px */
+}
+
+.verticalImgs {  /* Second set of ABOUT pics */
+    width: var(--ABOUT-BW);
+    height: 14.5416667rem;  /* 349px */
+}
+
+#horizontalImgContainer {
+    flex-direction: row;
+}
+
+#verticalImgContainer {
+    flex-direction: column;
+}
+
+#imgLeft {
+    border-color: var(--DEV-SECCOLOR);
+}
+
+#imgRight {
+    border-color: var(--MUS-SECCOLOR);
+}
+
+#imgTop {
+    border-color: var(--DEV-SECCOLOR);
+}
+
+#imgBottom {
+    border-color: var(--MUS-SECCOLOR);
+}
+
+
+#lastImg {
+    width: var(--ABOUT-BW);
+    height: 31.0416667rem;  /* 745px */
+    border-color: var(--GEN-SECCOLOR); 
+}
+
+/* || BOTTOM LINKS || */
+#bottomLinks {
     display: grid;
     grid-template-areas:
         "sw me"
         "sk le"
-        "co co";
-    gap: 1.875rem;
+        "co co"
+        "gt li";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    width: 100%;
+    gap: 1.125rem;
 }
 
-.bottomBtn {
-    min-width: 15.625rem;
-    border-radius: var(--BORDER-RAD);
+.bottomLink {
     text-align: center;
 }
 
 #sw {
-    border: 2px solid var(--DEV-SECCOLOR);
+    border-color: var(--DEV-SECCOLOR);
     grid-area: sw;
 }
 
 #me {
-    border: 2px solid var(--MUS-SECCOLOR);
+    border-color: var(--MUS-SECCOLOR);
     grid-area: me;
 }
 
 #sk {
-    border: 2px solid var(--DEV-SECCOLOR);
+    border-color: var(--DEV-SECCOLOR);
     grid-area: sk;
 }
 
 #le {
-    border: 2px solid var(--MUS-SECCOLOR);
+    border-color: var(--MUS-SECCOLOR);
     grid-area: le;
+/* Temporarily code ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+    color: whitesmoke;
+    background: transparent;
+    font-size: var(--FS);
+    cursor: pointer;
 }
 
+#le:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#le:active {
+    color: rgba(255, 255, 255, 0.575);
+} /* |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+
 #co {
-    border: 2px solid var(--GEN-SECCOLOR);
+    border-color: var(--GEN-SECCOLOR);
     grid-area: co;
+}
+
+#gh {
+    border-color: #6cc644;
+    grid-area: gt;
+}
+
+#li {
+    border-color: #0077B5;
+    grid-area: li;
 }
 
 /* || Properties for JS || */
 /* Each ID is a part of the intro sequence */
-#hi, #myNameIs, #titleHr, #headshot, #dev, #mus, #teach, #lead, #btnLinks {
+#hi, #myNameIs, #titleHr, #headshot, #dev, #mus, #teach, #lead {
     opacity: 0;
+}
+
+/* || MOBILE SETTINGS || */
+@media screen and (max-width: 768px) {
+
+    #intro {
+        margin: 4rem 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    .blocks {
+        flex-flow: column;
+    }
+    
+    .box1 {
+        order: 2;
+    }
+
+    .box2 {
+        order: 1;
+    }
 }

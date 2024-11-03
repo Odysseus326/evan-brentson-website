@@ -11,16 +11,18 @@
         <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/default.css">
     </head>
+
     <body>
+
         <!-- // HEADER NAVIGATION BAR // -->
         <header>
             <ul id="nav">
                 <!-- HOME LINK -->
                 <li><a href="#" onclick="setState(false)">HOME</a></li>
                 <!-- ABOUT ME LINK -->
-                <li><a href="#hrDivider" onclick="setState(false)">ABOUT</a></li>
+                <li id="aboutLink"><a href="#hrDivider" onclick="setState(false)">ABOUT</a></li>
                 <!-- SWE PORTFOLIO LINK -->
-                <li id="port"><p>PORTFOLIO &#x25BC;</p>
+                <li id="port"><button>PORTFOLIO &#x25BC;</button>
                     <ul id="dropdown">
                         <li><a href="portfolioDev.html">DEVELOPMENT</a></li>
                         <li><a href="portfolioMus.html">MUSIC</a></li>
@@ -29,95 +31,107 @@
                 <!-- MUSICAL EXPERIENCE-->
                 <li><a href="skills.html">SKILLS</a></li>
                 <!--  LESSONS -->
-                <li><a onclick="lessons()">LESSONS</a></li>
+                <li id="lessons"><button onclick="lessons()">LESSONS</button></li> <!-- Temporarily a button until desired destination is complete. Code will match other links then -->
                 <!-- CONTACT -->
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </header>
+
         <main>
-            <article id="intro">  <!-- Opening Content -->
-                    <div id="introLeft">    
-                        <div id="greet">
-                            <h1 id="name" class="titles gen"><span id="hi">👋 Hi!</span> <span id="myNameIs">My name is...</span></h1>
-                            <hr id="titleHr">
-                            <p>
-                                <span id="dev" class="subTitles">Developer</span>
-                                <span id="mus" class="subTitles">Musician</span>
-                                <span id="teach" class="subTitles">Teacher</span>
-                                <span id="lead" class="subTitles">Leader</span>
-                            </p>
-                        </div>
-                        <div id="btnLinks">
-                            <a href="" id="btnDev" class="btnNav">Development</a>
-                            <a href="" id="btnMus" class="btnNav">Music</a>
-                        </div>
-                    </div>
-                    <div id="introRight">
-                        <img id="headshot" src="../imgs/headshot.png" alt="Headshot of Evan Brentson">
-                    </div>
+
+        <!-- Opening Content -->  
+            <article id="intro">  
+                <div id="greet">
+                    <h1 id="name" class="titles gen">
+                        <span id="hi">👋 Hi!</span>
+                        <span id="myNameIs">My name is...</span>
+                    </h1>
+                    <hr id="titleHr">
+                    <p>
+                        <span id="dev" class="subTitles">Developer</span>
+                        <span id="mus" class="subTitles">Musician</span>
+                        <span id="teach" class="subTitles">Teacher</span>
+                        <span id="lead" class="subTitles">Leader</span>
+                    </p>
+                </div>
+                <img id="headshot" class="box" src="../imgs/headshot.png" alt="Headshot of Evan Brentson">
             </article>
+
             <hr id="hrDivider">
-            <article id="about">
-                <h1 class="titles gen">About Me</h1>
-                <section class="blocks">
-                    <div class="blockAlt">
-                        <h2 class="quote">“I am a software developer and a musician. I have other skills and hobbies too, but these two define who I am best.”</h2>
-                        <div id="leftRight" class="twoImgs">
-                            <img id="imgLeft" class="horizontalImgs" src="../imgs/desk.png" alt="Evan coding.">
-                            <img id="imgRight" class="horizontalImgs" src="../imgs/marimba.png" alt="Evan playing the marimba">
+
+            <!-- About me Section -->
+            <div id="about">
+
+                <h1 id="aboutTitle" class="titles gen">About Me</h1>
+
+                <article id="aboutContent">
+
+                    <section class="blocks">
+                        <div class="blockAlt">
+                            <h2 class="quote">“I am a software developer and a musician. I have other skills and hobbies too, but these two define who I am best.”</h2>
+                            <div id="horizontalImgContainer" class="twoImgs">
+                                <img id="imgLeft" class="horizontalImgs box" src="../imgs/desk.png" alt="Evan coding.">
+                                <img id="imgRight" class="horizontalImgs box" src="../imgs/marimba.png" alt="Evan playing the marimba">
+                            </div>
                         </div>
-                    </div>
-                    <div class="box blockText">
-                        <h3 class="subTitles">At a glance</h3>
-                            <p>Evan is a software developer with full-stack experience. He is also and an extensively trained percussionist. Evan has an <abbr title="Associate of Science">AS</abbr> in science and an <abbr title="Associate of Arts">AA</abbr> in music, as well as many experiences that shaped him into</p>
+                        <div class="box blockText">
+                            <h3 class="subTitles">At a glance</h3>
+                                <p>Evan is a software developer with full-stack experience. He is also and an extensively trained percussionist. Evan has an <abbr title="Associate of Science">AS</abbr> in science and an <abbr title="Associate of Arts">AA</abbr> in music, as well as many experiences that shaped him into</p>
+                                <br>
+                                <p>Evan found his passion for technology and music in middle school and continued exploring them in high school engineering and music classes. After graduation, he attended Washington State University with hopes of getting a degree in Computer Science but would return home after the first year and attend and eventually graduate from Pierce College. He also gained a lot of business experience during his 5 years as a department leader in retail.</p>
+                                <br>
+                                <p>Evan chose not to continue with education at university. He believed it would be a better use of time and resources to learn on his own, learning directly from those who exist within the relevant industries.</p>
+                        </div>
+                    </section>
+
+                    <section class="blocks ">
+                        <div class="box blockText box1">
+                            <h3 class="subTitles">Evan's drive</h3>
+                            <p>Most of Evan’s training in both software engineering and music comes directly from hands-on learning. He would temper his knowledge with experience through creating applications or performing repertoire on one of his instruments.</p>
                             <br>
-                            <p>Evan found his passion for technology and music in middle school and continued exploring them in high school engineering and music classes. After graduation, he attended Washington State University with hopes of getting a degree in Computer Science but would return home after the first year and attend and eventually graduate from Pierce College. He also gained a lot of business experience during his 5 years as a department leader in retail.</p>
+                            <p>Evan’s mission in software development requires that he is always learning. Whether the content is old or new, he finds value in every new concept as it stengthens his fundamental understanding of the whole practice.</p>
                             <br>
-                            <p>Evan chose not to continue with education at university. He believed it would be a better use of time and resources to learn on his own, learning directly from those who exist within the relevant industries.</p>
-                    </div>
-                </section>
-                <section class="blocks">
-                    <div class="box blockText">
-                        <h3 class="subTitles">Evan's drive</h3>
-                        <p>Most of Evan’s training in both software engineering and music comes directly from hands-on learning. He would temper his knowledge with experience through creating applications or performing repertoire on one of his instruments.</p>
-                        <br>
-                        <p>Evan’s mission in software development requires that he is always learning. Whether the content is old or new, he finds value in every new concept as it stengthens his fundamental understanding of the whole practice.</p>
-                        <br>
-                        <p>As for music, Evan believes his experiences as a musician are to thank for much of his growth as an individual. Regardless of his love for percussion and performing, music is a powerful opportunity to learn from and collaborate with others, improving skills in teamwork, creativity, and other qualities not typically learned while working at a desk.</p>
-                    </div>
-                    <div class="blockAlt">
-                        <h2>
-                            <span class="quote">Music or Engineering...</span>
-                            <span class="quote">Why not both!</span></h2>
-                        <div id="topBottom" class="twoImgs">
-                            <img id="imgTop" class="verticalImgs" src="../imgs/outside.png" alt="Evan working on a project on his laptop">
-                            <img id="imgBottom" class="verticalImgs" src="../imgs/pregame.png" alt="Evan with the WSU Drumline">
+                            <p>As for music, Evan believes his experiences as a musician are to thank for much of his growth as an individual. Regardless of his love for percussion and performing, music is a powerful opportunity to learn from and collaborate with others, improving skills in teamwork, creativity, and other qualities not typically learned while working at a desk.</p>
                         </div>
-                    </div>
-                </section>
-                <section class="blocks">
-                    <div class="blockAlt">
-                        <img id="lastimg" src="../imgs/dogs.png" alt="Evan with his dogs">
-                    </div>
-                    <div id="lastBlock" class="box blockText">
-                        <h3 class="subTitles">The best of both</h3>
-                        <p>Evan is a very well-rounded and skilled individual with plenty of experiences and relationships to show for it. As both a developer and a musician, he believes he stands out in each field because of his involvement with the other. Both activities promote very different mindsets and behaviors, and Evan believes he embodies the best of both.</p>
-                        <br>
-                        <p id="lastP">If you want to delve more into Evan's experiences or sevices, click on one of the links below.</p>
-                        <br>
-                        <div id="bottomBtns">
-                            <a id="sk" class="bottomBtn" href="skills.html">Skills</a>
-                            <a id="sw" class="bottomBtn" href="portfolioDev.html">Dev Portfolio</a>
-                            <a id="me" class="bottomBtn" href="portfolioMus.html">Music Experience</a>
-                            <a id="le" class="bottomBtn" href="lessonsTemp.html">Lessons</a>
-                            <a id="co" class="bottomBtn" href="contact.html">Contact</a>
+                        <div class="blockAlt box2">
+                            <h2>
+                                <span class="quote">Music or Engineering...</span>
+                                <span class="quote">Why not both!</span></h2>
+                            <div id="verticalImgContainer" class="twoImgs">
+                                <img id="imgTop" class="verticalImgs box" src="../imgs/outside.png" alt="Evan working on a project on his laptop">
+                                <img id="imgBottom" class="verticalImgs box" src="../imgs/pregame.png" alt="Evan with the WSU Drumline">
+                            </div>
                         </div>
-                    </div>
-                </section>
-            </article>
+                    </section>
+
+                    <section class="blocks">
+                        <div class="blockAlt">
+                            <img id="lastImg" class="box" src="../imgs/dogs.png" alt="Evan with his dogs">
+                        </div>
+                        <div id="lastBlock" class="box blockText">
+                            <h3 class="subTitles">The best of both</h3>
+                            <p>Evan is a well-rounded and skilled individual with plenty of experiences and relationships to show for it. As a developer and a musician, he believes he stands out in each field because of his involvement with the other. Both activities promote different mindsets and behaviors, and Evan believes he embodies the best of both.</p>
+                            <br>
+                            <p id="lastP">If you want to learn more about Evan, click on one of the links below.</p>
+                            <br>
+                            <div id="bottomLinks">
+                                <a id="sk" class="bottomLink box" href="skills.html">Skills</a>
+                                <a id="sw" class="bottomLink box" href="portfolioDev.html">Dev Portfolio</a>
+                                <a id="me" class="bottomLink box" href="portfolioMus.html">Music Experience</a>
+                                <button id="le" class="bottomLink box" href="lessonsTemp.html" onclick="lessons()">Lessons</button>  <!-- Change to <a> tag when lessons website is complete -->
+                                <a id="co" class="bottomLink box" href="contact.html">Contact</a>
+                                <a id="gh" class="bottomLink box" href="https://github.com/Odysseus326">GitHub</a>
+                                <a id="li" class="bottomLink box" href="https://www.linkedin.com/in/evan-brentson/">LinkedIn</a>
+                            </div>
+                        </div>
+                    </section>
+
+                </article>
+            </div>
         </main>
+
         <script src="../js/utility.js"></script>
-        <script src="../js/lessons.js"></script>
         <script src="../js/default.js"></script>
+
     </body>
 </html>

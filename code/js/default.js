@@ -1,6 +1,7 @@
-// Delay function
+// Delay function by ms. Rejects if session 'newstate' is false (see utilities.js)
 function delay(time) {
     return new Promise((resolve, reject) => {
+
         if (getState) {
             setTimeout(() => {
                 resolve();
@@ -10,6 +11,7 @@ function delay(time) {
     })
 }
 
+
 // Edits innerHTML by ID. Usable as part of a sequence synchronous of events
 function changeHTML(selector, newHTML) {
     return new Promise((resolve) => {
@@ -18,11 +20,13 @@ function changeHTML(selector, newHTML) {
     })
 }
 
-// Fade in animation by ID
+
+// Fade in animation by ID as string
 function fadeInID(selector, time) {
     return new Promise((resolve, reject) => {
         let element = document.getElementById(selector);
         let opacity;
+
         const intervalID = setInterval(function() {
             opacity = Number(getComputedStyle(element).getPropertyValue("opacity"));
             if (opacity < 1 && getState()) {
@@ -32,39 +36,45 @@ function fadeInID(selector, time) {
                 clearInterval(intervalID);
                 element.style.opacity = 1;
                 resolve();
-            }
-            else {
+            } else {
                 reject();
             }
         }, time);
     });
 }
 
-// Fade out animation by ID
+
+// Fade out animation by ID as string
 function fadeOutID(selector, time) {
     return new Promise((resolve) => {
         let element = document.getElementById(selector);
         let opacity;
         const intervalID = setInterval(function() {
             opacity = Number(getComputedStyle(element).getPropertyValue("opacity"));
+
             if (opacity > 0.005) {
                 opacity -= 0.01;
                 element.style.opacity = opacity;
+
             } else {
                 clearInterval(intervalID);
                 element.style.opacity = 0;
                 resolve();
             }
+
         } , time);
     })
 }
 
-// Changes opacity to 1 (full)
+
+// Changes opacity to 1 (full) by ID as string
 function showID(selector) {
     let element = document.getElementById(selector);
     element.style.opacity = 1;
 }
 
+
+// Introduction animation. Throws error if delay delay fuction is rejected (see above)
 async function introAnim() {
     try {
         await delay(500);
@@ -100,26 +110,29 @@ async function introAnim() {
         await fadeInID("about", 2);
         console.log('Fade in "about" complete');
         setState(false);
-    } catch (error) {
+
+    } catch (error) {  // Cancels the animation and sets all above element's opacity to 1 (full)
         showAll();
     }
 }
 
+
+// Shows all listed elements instantly. Only occurs when HOME or ABOUT links are clicked mid-animation (see introAnim function above)
 function showAll() {
     console.log("Animation aborted, showing all elements");
     let elements = ["name", "headshot", "titleHr", "dev", "mus", "teach", "lead", "hrDivider", "about"];
         changeHTML("name", "Evan Brentson");
+
         for (let i = 0; i < elements.length; i++)
             showID(elements[i]);
 }
 
-if (getState() !== false) {
+
+// Executes after HOME page loads
+if (getState() !== false) {  // Executes intro sequence if the session is new
     setState(true);
     introAnim();
+
 } else if (getState() === false) {
     showAll();
-}
-
-function mobile() {
-    alert("The mobile version for this website is still under construction.")
 }

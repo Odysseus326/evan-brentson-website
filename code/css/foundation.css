@@ -10,8 +10,8 @@
 /* || VARIABLES || */
     /* || GENERAL || */
     --FF: "Ninito", sans-serif;
-    --FS: 1.5rem;
-    --FS-BIG: 2.5rem;
+    --FS: clamp(11px, 1.25vw, 24px);
+    --FS-BIG: 1.667rem;
     /* || COLORS || */
     --FC: whitesmoke;
     --BGCOLOR: #140F2D;
@@ -23,21 +23,27 @@
     --MUS-SECCOLOR: #D72638;  /* Music Secondary Color */
     --MUS-DARKCOLOR: #d7263883;
     /* || FORMAT || */
-    --BORDER-RAD: 3.125rem;
+    --BORDER-RAD: 1.875rem;
+
+    
+    
+}
+html {
+    font-size: var(--FS);
 }
 
 body {
     font-family: var(--FF);
-    font-size: var(--FS);
     color: var(--FC);
     background-image: linear-gradient(var(--RADIAL-BGCOLOR), var(--BGCOLOR));
-    min-height: 100vh; /* Stretches background to entire viewport height */
+    min-height: 100vh;
 }
 
 abbr {
     text-decoration: none;
 }
 
+/* Sets font color to define a category (development, music, general/soft-skills */
 .gen {
     color: var(--GEN-SECCOLOR);
 }
@@ -54,19 +60,19 @@ abbr {
     font-size: var(--FS-BIG);
 }
 
+/* Basic style of all boxes */
 .box {
     border: 2px solid;
     border-radius: var(--BORDER-RAD);
 }
 
+/* Styling of categorical boxes */
 .devBorder {
     border-color: var(--DEV-SECCOLOR);
 }
-
 .musBorder {
     border-color: var(--MUS-SECCOLOR);
 }
-
 .softBorder {
     border-color: var(--GEN-SECCOLOR);
 }
@@ -78,9 +84,27 @@ hr {
     width: 100%;
 }
 
+/* <hr> elements used to seperate entire sections of a page */
 #hrDivider {
     margin-top: 12vh;
-    /*min-width: 82.5rem;*/
     left: 0;
     opacity: 0;
+}
+
+/* || MOBILE SETTINGS || */
+@media screen and (max-width: 768px) {
+    :root {
+        --FS: clamp(11px, 3vw, 24px);;
+    }
+
+    .blocks {
+        flex-flow: column;
+    }
+    .box1 {
+        order: 2;
+    }
+
+    .box2 {
+        order: 1;
+    }
 }

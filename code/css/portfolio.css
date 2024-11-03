@@ -1,23 +1,23 @@
-:root {
-    --PORT-BW: 45rem;
-    --PORT-BH: 33.75rem;
-    --PORT-GAP: 2.5rem;
-}
+/* Document styles both music and development portfolios */
 
 main {
+    width: 100%;
     display: flex;
     justify-content: center;
 }
+
+/* Outer container */
 #portfolio {
-    width: max-content;  /* Ensures parent container is as big as child containers */
-    margin: 4vh 0;
-    padding: 3.75rem;
-    border-radius: var(--BORDER-RAD);
+    width: max-content;
+    margin: 6rem 0 2rem 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 2.5rem;
+    gap: 1.5rem;
+}
+
+h1 {  /* Main title */
+    text-align: center;
 }
 
 #musTitle {  /* Overwrites .titles in foundation.css */
@@ -29,79 +29,75 @@ main {
 }
 
 p {
-    text-indent: 1em;
+    text-indent: 1.25em;
 }
 
+/* Each portolio entry */
 section {
-    border-radius: var(--BORDER-RAD);
-    width: max-content;
-    padding: 2.5rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: row;
-    gap: var(--PORT-GAP);
-}
-.blockText {
-    width: var(--PORT-BW);
-    line-height: 1.5;
-    padding: 1.25rem 2.5rem;
+    gap: 1.5rem;
 }
 
-.devBlockText {
-    border-color: var(--DEV-SECCOLOR);
+.blockText,
+figure,
+img {
+    width: 27rem;
 }
-.musBlockText {
-    border-color: var(--MUS-SECCOLOR);
+
+.blockText {
+    line-height: 1.5;
+    padding: 0.75rem 1.5rem;
 }
 
 figure {
-    max-width: var(--PORT-BW);
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 0.6rem;
 }
 
 figcaption {
-    font-size: 1rem;
+    font-size: 0.6rem;
     font-style: italic;
 }
-img {
-    width: var(--PORT-BW);
-    height: var(--PORT-BH);
-    border: solid 2px var(--GEN-SECCOLOR);
-    border-radius: var(--BORDER-RAD);
+
+img {  /* Only affects music imgs */
+    height: 20.25rem;
 }
 
 .devHr {
     background-color: var(--DEV-SECCOLOR);
 }
+
 .musHr {
     background-color: var(--MUS-SECCOLOR);
 }
 
-/* Height of images is directly relative to the height of the text box (which is dependant of amount of text) */
+/* Height of dev images is directly relative to the height of the text box (which is dependant on amount of text) */
 #unnamed {
-    height: 682px;
+    height: 28.416667rem;  /* 682px */
 }
 
 #personalWebsite {
-    height: 1300px;
+    height: 54.1666667rem;  /* 1300px */
 }
 
 #firstWebpage {
-    height: 538px;
+    height: 22.4166667rem;  /* 538px */
 }
 
 #landscape {
-    height: 826px;
+    height: 34.4166667rem;  /* 826px */
 }
 
 #landlordDb {
-    height: 862px;
+    height: 35.9166667rem;  /* 862px */
 }
 
+/* Background for each textbox. Order is 1, 2, 3, 4, 3, 2, repeat... */
 .musBg1 {
     background-image: linear-gradient(var(--BGCOLOR), #d726381c);
 }
@@ -114,6 +110,7 @@ img {
 .musBg4 {
     background-image: linear-gradient(#d726381c, var(--BGCOLOR));
 }
+
 .devBg1 {
     background-image: linear-gradient(var(--BGCOLOR), #3f89c527);
 }

@@ -1,27 +1,36 @@
 header {
-    font-size: 0.8rem;
+    font-size: clamp(8px, 0.8rem, 14px);
     background-color:#202020;
-    min-width: max-content;
     height: 3.75rem;
+    max-height: 60px;
     display: flex;
     justify-content: right;
     align-items: center;
-    padding-right: 5rem;
+    padding-right: 2rem;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
 }
-ul {
-    list-style: none;  /* Removes bullets */
+
+#nav, #dropdown { /* All list items in the header */
+    list-style: none;
 }
-#nav {
+
+#nav {  /* List of header elements */
     display: flex;
-    gap: 2.5rem;
+    gap: 2rem;
 }
-#dropdown {
-    font-size: 0.8rem;
+
+#port button,
+#lessons button {  /* PORTFOLIO and LESSONS header elements */
+    color: var(--FC);
+    background-color: transparent;
+    border: none;
+}
+
+#dropdown {  /* Dropdown menu of portfolio elements */
     background: #202020;
     padding: 0 0.5rem 0.5rem 0.5rem;
     position: absolute;
@@ -29,20 +38,47 @@ ul {
     display: none;
     transform: translateX(-0.5rem);
 }
-ul li:hover ul#dropdown, #dropdown li a:hover {
+
+#port:hover #dropdown,
+#port:focus-within #dropdown,
+#dropdown li a:hover {  /* Dropdown menu of portfolio elements when #port or #dropdown is hovered or focused over */
     display: block;
 }
-ul li ul li {
+
+#dropdown li {  /* Dropdown menu list elements */
     padding-top: 1rem;
 }
-a, a:visited, li p {
+
+a, a:visited,
+#port button,
+#lessons button {  /* links and "PORTFOLIO" dropdown hover button */
     color: whitesmoke;
     text-decoration: none;
     cursor: pointer;
 }
-a:hover, a:focus, li p:hover, li p:focus {
+
+a:hover,
+a:focus,
+#port button:hover,
+#port button:focus,
+#lessons button:hover,
+#lessons button:focus {  /* links, "PORTFOLIO" + dropdown, and LESSONS hover elements */
     color: rgba(255, 255, 255, 0.75);
 }
-a:active {
+
+a:active, #lessons button:active {  /* Header elements (except "PORTFOLIO") when clicked */
     color: rgba(255, 255, 255, 0.575);
+}
+
+/* || MOBILE SETTINGS || */
+@media screen and (max-width: 768px) {
+
+    header {
+        padding-right: 0;
+        justify-content: center;
+    }
+
+    #aboutLink {
+        display: none;
+    }
 }

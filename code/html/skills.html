@@ -11,16 +11,18 @@
         <link rel="stylesheet" href="../css/header.css">
         <link rel="stylesheet" href="../css/skills.css">
     </head>
+
     <body>
+
         <!-- // HEADER NAVIGATION BAR // -->
         <header>
             <ul id="nav">
                 <!-- HOME LINK -->
                 <li><a href="default.html" onclick="setState(false)">HOME</a></li>
                 <!-- ABOUT ME LINK -->
-                <li><a href="default.html#hrDivider" onclick="setState(false)">ABOUT</a></li>
+                <li id="aboutLink"><a href="default.html#hrDivider" onclick="setState(false)">ABOUT</a></li>
                 <!-- SWE PORTFOLIO LINK -->
-                <li id="port"><p>PORTFOLIO &#x25BC;</p>
+                <li id="port"><button>PORTFOLIO &#x25BC;</button>
                     <ul id="dropdown">
                         <li><a href="portfolioDev.html">DEVELOPMENT</a></li>
                         <li><a href="portfolioMus.html">MUSIC</a></li>
@@ -29,473 +31,630 @@
                 <!-- MUSICAL EXPERIENCE-->
                 <li><a href="#">SKILLS</a></li>
                 <!--  LESSONS -->
-                <li><a onclick="lessons()">LESSONS</a></li>
+                <li id="lessons"><button onclick="lessons()">LESSONS</button></li> <!-- Temporarily a button until desired destination is complete. Code will match other links then -->
                 <!-- CONTACT -->
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </header>
+
         <!-- || MAIN SECTIONS || -->
         <main>
+
             <h1 class="titles gen">Skills</h1>
+
             <hr>
+
             <section id="intro">
-                <h3>Click one of the buttons to get a more in-depth description of skills in that area.</h3>
+                <h3 id="instructions">Click a button to get a more in-depth description of skills in that area.</h3>
                 <div id="selectors">
                     <button id="devButton" class="box selector devBorder" onclick="selectDev()">Software Engineering</button>
                     <button id="musButton" class="box selector musBorder" onclick="selectMus()">Music</button>
                     <button id="softButton" class="box selector softBorder" onclick="selectSoft()">Soft Skills</button>
                 </div>
             </section>
+
             <hr>
+
+            <!-- || SOFTWARE ENGINEERING SKILLS || -->
             <section id="blurbGen">
                 <h1 id="overview" class="titles blurbsTitles">Overview</h1>
                 <div class="blurbs">
+
                     <div class="column">
-                        <!-- ADD <abbr> TAGS TO ALL ABBREVIATIONS AND MORE SEPCIFIC VOCABULARY (LIKE DEMOCRATIC AND SERVENT LEADERSHIP STYLES) -->
                         <article id="gen1" class="box blurb devBorder">
                             <h3>Web-Development</h3>
                             <div class="content">
-                                <p>Very comfortable with <abbr class="highlight" title="Hypertext Markup Language">HTML</abbr> and <abbr class="highlight" title="Cascading Style Sheets">CSS</abbr> syntax and general webpage design patterns.</p>
+                                <p>
+                                    Very comfortable with <abbr title="Hypertext Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> syntax and general webpage design patterns.
+                                </p>
                             </div>
                         </article>
                         <article id="gen4" class="box blurb devBorder">
                             <h3>JavaScript</h3>
                             <div class="content">
-                                <p>Proficient with JavaScript syntax and dynamic programming concepts. Familiar with jQuery, jQuery <abbr class="highlight" title="user interface">UI</abbr>, and React frameworks and the Node.js environment.</p>
+                                <p>
+                                    Proficient with JavaScript syntax and dynamic programming concepts. Familiar with jQuery, jQuery <abbr title="user interface">UI</abbr>, and React frameworks and the Node.js environment.
+                                </p>
                             </div>
                         </article>
                         <article id="gen7" class="box blurb devBorder">
                             <h3>Java & SQL</h3>
                             <div class="content">
-                                <p>Proficient with Java syntax and <abbr class="highlight" title="object-oriented programming">OOP</abbr> concepts. Practiced with Java Collections API, Java Database Connectivity (JDBC), Hibernate, and Spring/Spring Boot frameworks. Versed in <abbr class="highlight" title="Structured Query Language">SQL</abbr> (MySQL) and databases.</p>
+                                <p>
+                                    Proficient with Java syntax and <abbr title="object-oriented programming">OOP</abbr> concepts. Practiced with Java Collections API, Java Database Connectivity (JDBC), Hibernate, and Spring/Spring Boot frameworks. Versed in <abbr title="Structured Query Language">SQL</abbr> (MySQL) and databases.
+                                </p>
                             </div>
                         </article>
                         <article id="gen10" class="box blurb devBorder">
                             <h3>Data Structure & Algorithm</h3>
                             <div class="content">
-                                <p>Knowledgeable of various data structures and algorithms, the benefits and drawbacks of each, and how to create them.</p>
+                                <p>
+                                    Knowledgeable of various data structures and algorithms, the benefits and drawbacks of each, and how to create them.
+                                </p>
                             </div>
                         </article>
                     </div>
+
                     <div class="column">
                         <article id="gen2" class="box blurb musBorder">
                             <h3>Percussion</h3>
                             <div class="content">
-                                <p>Skilled percussionist. Excellent with rudimental drumming and 4-mallet playing. Proficient with timpani, drum-kit, hand-drums, and most auxiliary instruments.</p>
+                                <p>
+                                    Skilled percussionist. Excellent with rudimental drumming and 4-mallet playing. Proficient with timpani, drum-kit, hand-drums, and most auxiliary instruments.
+                                </p>
                             </div>
                         </article>
                         <article id="gen5" class="box blurb musBorder">
                             <h3>Music Genres</h3>
                             <div class="content">
-                                <p>Highly trained in marching, concert and contemporary genres, and experienced in orchestral, jazz, and rock settings.</p>
+                                <p>
+                                    Highly trained in marching, concert and contemporary genres, and experienced in orchestral, jazz, and rock settings.
+                                </p>
                             </div>
                         </article>
                         <article id="gen8" class="box blurb musBorder">
                             <h3>Music theory</h3>
                             <div class="content">
-                                <p>Trained in western classical music theory and ear training. Capable of composing music, especially that of marching battery and drumline</p>
+                                <p>
+                                    Trained in western classical music theory and ear training. Capable of composing music, especially that of marching battery and drumline.
+                                </p>
                             </div>
                         </article>
                         <article id="gen11" class="box blurb musBorder">
                             <h3>Teaching</h3>
                             <div class="content">
-                                <p>Experienced teaching students between ages 11 – 21 percussion performance and musical theory in middle school, high school, and college settings.</p>
+                                <p>
+                                    Experienced teaching students between ages 11 – 21 percussion performance and musical theory in middle school, high school, and college settings.
+                                </p>
                             </div>
                         </article>
                     </div>
+
                     <div class="column">
                         <article id="gen3" class="box blurb softBorder">
                             <h3>Leadership</h3>
                             <div class="content">
-                                <p>Has an adaptable style of leadership, being able to approach any situation with confidence. Prefers a democratic & servant style, leading through respect, not fear.</p>
+                                <p>
+                                    Has an adaptable style of leadership, being able to approach any situation with confidence. Prefers a democratic & servant style, leading through respect, not fear.
+                                </p>
                             </div>
                         </article>
                         <article id="gen6" class="box blurb softBorder">
                             <h3>Problem-solving</h3>
                             <div class="content">
-                                <p>Capable problem solver in several settings. Always seeking a healthy solution to any problem through innovation and creativity.</p>
+                                <p>
+                                    Capable problem solver in several settings. Always seeking a healthy solution to any problem through innovation and creativity.
+                                </p>
                             </div>
                         </article>
                         <article id="gen9" class="box blurb softBorder">
                             <h3>Teamwork</h3>
                             <div class="content">
-                                <p>Un-paralleled teamwork skills in any setting, any position, and under any management/leader. Tons of experience constantly working positively with others in nearly every setting.</p>
+                                <p>
+                                    Un-paralleled teamwork skills in any setting, any position, and under any management/leader. Tons of experience constantly working positively with others in nearly every setting.
+                                </p>
                             </div>
                         </article>
                         <article id="gen12" class="box blurb softBorder">
                             <h3>Emotional Intelligence</h3>
                             <div class="content">
-                                <p>Very self-aware of personal (and others) mood and capable of acting accordingly.</p>
+                                <p>
+                                    Very self-aware of personal (and others) mood and capable of acting accordingly.
+                                </p>
                             </div>
                         </article>
                     </div>
+
                 </div>
             </section>
-<!-- || SOFTWARE ENGINEERING SKILLS || -->
+
+            <!-- || SOFTWARE ENGINEERING SKILLS || -->
             <section id="blurbDev">
                 <h1 class="titles blurbsTitles">Software Development</h1>
                 <div class="blurbs">
+
                     <div class="column">
                         <article id="dev1" class="box blurb devBorder">
                             <h3>JavaScript</h3>
                             <div class="content">
-                                <p>Proficient with the core syntax of the JavaScript programming language.</p>
-                                <p id="devExpanded1" class="expanded">Can utilize it as both a functional and an object-oriented programming language. Prefers a healthy mix of both to write code that is readable, maintainable, and non-repetitive. Competent in performing <abbr title="document object model">DOM</abbr> manipulations and adding dynamic features to front-end applications with and without frameworks / APIs. Familiar with the NodeJS runtime environment and writing code used out of browser and in back-end applications. Learned of the React framework. Knowledgeable of the jQuery and jQuery UI frameworks.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Proficient with the core syntax of the JavaScript programming language.
+                                </p>
+                                <p id="devExpanded1" class="expanded">
+                                    Can utilize it as both a functional and an object-oriented programming language. Prefers a healthy mix of both to write code that is readable, maintainable, and non-repetitive. Competent in performing <abbr title="document object model">DOM</abbr> manipulations and adding dynamic features to front-end applications with and without frameworks / APIs. Familiar with the NodeJS runtime environment and writing code used out of browser and in back-end applications. Learned of the React framework. Knowledgeable of the jQuery and jQuery UI frameworks.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('devExpanded1', this)">&#x25BC;</button>
                             </div>
                         </article>
                         <article id="dev4" class="box blurb devBorder">
                             <h3>HTML & CSS</h3>
                             <div class="content">
-                                <p>Skilled in writing and designing the user Interface (UI) in front end applications with Hypertext Markup Language (HTML) and Cascading Style Sheets (CSS).</p>
-                                <p id="devExpanded4" class="expanded">Experiences include work with responsive design, using tools like media queries to create pages that function for desktop / mobile applications, flexboxes / grids, and animations / transitions (with or without JavaScript). Writes HTML code with discerning semantics, including using block-level elements other than just <code>div</code>.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Skilled in writing and designing the user Interface (UI) in front end applications with Hypertext Markup Language (HTML) and Cascading Style Sheets (CSS).
+                                </p>
+                                <p id="devExpanded4" class="expanded">
+                                    Experiences include work with responsive design, using tools like media queries to create pages that function for desktop / mobile applications, flexboxes / grids, and animations / transitions (with or without JavaScript). Writes HTML code with discerning semantics, including using block-level elements other than just <code>div</code>.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('devExpanded4', this)">&#x25BC;</button>
                             </div>
                         </article>
                         <article id="dev7" class="box blurb devBorder">
                             <h3>Python</h3>
                             <div class="content">
-                                <p>Some experience with the syntax of the Python programming language.</p>
-                                <p id="devExpanded7" class="expanded">Most experience is derived from writing code for data structures and algorithms.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Some experience with the syntax of the Python programming language.
+                                </p>
+                                <p id="devExpanded7" class="expanded">
+                                    Most experience is derived from writing code for data structures and algorithms.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('devExpanded7', this)">&#x25BC;</button>
                             </div>
                         </article>
                         <article id="dev10" class="box blurb devBorder">
                             <h3>Debugging</h3>
                             <div class="content">
-                                <p>Experienced with debugging code in front-end and back-end settings.</p>
-                                <p id="devExpanded10" class="expanded">Utilizes strategies involving isolation, console print statements, breakpoints (debuggers), and collaboration. Prefers using time away from work to think about how to fix a bug. </p>
-                                <div class="gap"></div>
+                                <p>
+                                    Experienced with debugging code in front-end and back-end settings.
+                                </p>
+                                <p id="devExpanded10" class="expanded">
+                                    Utilizes strategies involving isolation, console print statements, breakpoints (debuggers), and collaboration. Prefers using time away from work to think about how to fix a bug.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('devExpanded10', this)">&#x25BC;</button>
                             </div>
                         </article>
                     </div>
+
                     <div class="column">
                         <article id="dev2" class="box blurb devBorder">
                             <h3>Java</h3>
                             <div class="content">
-                                <p>Skillful with the core syntax of the Java programming language and its role as a strongly typed programming language.</p>
-                                <p id="devExpanded2" class="expanded">Holds a deep level of understanding and practice with object-oriented programming concepts (encapsulation, inheritance, abstraction), utilizing classes and interfaces for practical handling of objects and methods. Knowledgeable of the Java Collection’s API. Capable of configuring and integrating Database functionality through the Java Database Connectivity (JDBC) and Hibernate frameworks. Some experience with configuring and creating back-end applications with the Spring / Spring Boot framework.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Skillful with the core syntax of the Java programming language and its role as a strongly typed programming language.
+                                </p>
+                                <p id="devExpanded2" class="expanded">
+                                    Holds a deep level of understanding and practice with object-oriented programming concepts (encapsulation, inheritance, abstraction), utilizing classes and interfaces for practical handling of objects and methods. Knowledgeable of the Java Collection’s API. Capable of configuring and integrating Database functionality through the Java Database Connectivity (JDBC) and Hibernate frameworks. Some experience with configuring and creating back-end applications with the Spring / Spring Boot framework.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('devExpanded2', this)">&#x25BC;</button>
                             </div>
                         </article>
                         <article id="dev5" class="box blurb devBorder">
                             <h3>SQL</h3>
                             <div class="content">
-                                <p>Seasoned with Structured Query languages (SQL), primarily MySQL, some Postgres.</p>
-                                <p id="devExpanded5" class="expanded">Able to make requests to a database through a terminal, an SQL UI (MySQL Workbench), or through an app (Java + JDBC / Hibernate). Capable of creating a database or maintaining an existing one. Competent with CRUD (create, read update, delete) operations.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Seasoned with Structured Query languages (SQL), primarily MySQL, some Postgres.
+                                </p>
+                                <p id="devExpanded5" class="expanded">
+                                    Able to make requests to a database through a terminal, an SQL UI (MySQL Workbench), or through an app (Java + JDBC / Hibernate). Capable of creating a database or maintaining an existing one. Competent with CRUD (create, read update, delete) operations.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('devExpanded5', this)">&#x25BC;</button>
                             </div>
                         </article>
                         <article id="dev8" class="box blurb devBorder">
                             <h3>Problem Solving</h3>
                             <div class="content">
-                                <p>Capable problem solver, with and without the use of external resources.</p>
-                                <p id="devExpanded8" class="expanded">Competent in writing original code and solving most problems without the help of LLMs or other resources. Prefers breaking problems down into smaller pieces and following a logical step-by-step process to find a solution.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Capable problem solver, with and without the use of external resources.
+                                </p>
+                                <p id="devExpanded8" class="expanded">
+                                    Competent in writing original code and solving most problems without the help of LLMs or other resources. Prefers breaking problems down into smaller pieces and following a logical step-by-step process to find a solution.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('devExpanded8', this)">&#x25BC;</button>
                             </div>
                         </article>
                         <article id="dev11" class="box blurb devBorder">
                             <h3>Resourcefulness</h3>
                             <div class="content">
-                                <p>Very capable at utilizing resources to support endeavors in many subjects, including software development.</p>
-                                <p id="devExpanded11" class="expanded">Experienced researching unfamiliar topics and quickly finding useful and reliable sources. Always looking for opportunities to eliminate ignorance.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Very capable at utilizing resources to support endeavors in many subjects, including software development.
+                                </p>
+                                <p id="devExpanded11" class="expanded">
+                                    Experienced researching unfamiliar topics and quickly finding useful and reliable sources. Always looking for opportunities to eliminate ignorance.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('devExpanded11', this)">&#x25BC;</button>
                             </div>
                         </article>
                     </div>
+
                     <div class="column">
                         <article id="dev3" class="box blurb devBorder">
                             <h3>Version Control</h3>
                             <div class="content">
-                                <p>Knowledgeable of Git version control systems (GitHub).</p>
-                                <p id="devExpanded3" class="expanded">Capable of creating or using local and remote repositories to update progress on projects by pushing local repository changes to the remote repository and defining updates through detailed comments. Knowledgeable of project branching and pull requests. Capable of manipulating the state of a repository through a terminal (CMD, Git Bash) or an app (GitHub Desktop).</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Knowledgeable of Git version control systems (GitHub).
+                                </p>
+                                <p id="devExpanded3" class="expanded">
+                                    Capable of creating or using local and remote repositories to update progress on projects by pushing local repository changes to the remote repository and defining updates through detailed comments. Knowledgeable of project branching and pull requests. Capable of manipulating the state of a repository through a terminal (CMD, Git Bash) or an app (GitHub Desktop).
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('devExpanded3', this)">&#x25BC;</button>
                             </div>
                         </article>
                         <article id="dev6" class="box blurb devBorder">
                             <h3>IDE & TE Experience</h3>
                             <div class="content">
-                                <p>Experience with Microsoft’s Visual Studio Code (VSCode) text editor, and JetBrains IntelliJ IDEA and PyCharm integrated development environments (IDEs).</p>
-                                <p id="devExpanded6" class="expanded">Prefers using VSCode as main code editor, especially for HTML, CSS, and JavaScript. Extensive experience using VSCode for Java and Python but prefers JetBrains IntelliJ IDEA and PyCharm IDEs respectively.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Experience with Microsoft’s Visual Studio Code (VSCode) text editor, and JetBrains IntelliJ IDEA and PyCharm integrated development environments (IDEs).
+                                </p>
+                                <p id="devExpanded6" class="expanded">
+                                    Prefers using VSCode as main code editor, especially for HTML, CSS, and JavaScript. Extensive experience using VSCode for Java and Python but prefers JetBrains IntelliJ IDEA and PyCharm IDEs respectively.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('devExpanded6', this)">&#x25BC;</button>
                             </div>
                         </article>
                         <article id="dev9" class="box blurb devBorder">
                             <h3>Data Structure & Algorithm</h3>
                             <div class="content">
-                                <p>Familiar with Data Structures and Algorithms commonly used in software applications.</p>
-                                <p id="devExpanded9" class="expanded">Capable of creating and implementing data structures (array, linked list, stack, queue, and tree) and common algorithms (binary search, merge sort, etc.). Strong understanding of Big O Notation.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Familiar with Data Structures and Algorithms commonly used in software applications.
+                                </p>
+                                <p id="devExpanded9" class="expanded">
+                                    Capable of creating and implementing data structures (array, linked list, stack, queue, and tree) and common algorithms (binary search, merge sort, etc.). Strong understanding of Big O Notation.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('devExpanded9', this)">&#x25BC;</button>
                             </div>
                         </article>
                         <article id="dev12" class="box blurb devBorder">
                             <h3>LLMs</h3>
                             <div class="content">
-                                <p>Effective at using <abbr title="large language model">LLMs</abbr> (AI) to quickly complete tasks that would usually take vast amounts of time. Not reliant on LLMs to code.</p>
-                                <p id="devExpanded12" class="expanded">Strong writing skills allow for descriptive prompts that usually deliver a desirable output. Strong fundamental understanding of programming languages also enables a more precise result from writing prompts involving code.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Effective at using <abbr title="large language model">LLMs</abbr> (AI) to quickly complete tasks that would usually take vast amounts of time. Not reliant on LLMs to code.
+                                </p>
+                                <p id="devExpanded12" class="expanded">
+                                    Strong writing skills allow for descriptive prompts that usually deliver a desirable output. Strong fundamental understanding of programming languages also enables a more precise result from writing prompts involving code.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('devExpanded12', this)">&#x25BC;</button>
                             </div>
                         </article>
                     </div>
+
                 </div>
             </section>
+
             <!-- || MUSIC SKILLS || -->
             <section id="blurbMus">
                 <h1 class="titles blurbsTitles">Music</h1>
                 <div class="blurbs">
+
                     <div class="column">
-                        <!-- ADD <abbr> TAGS TO ALL ABBREVIATIONS AND MORE SEPCIFIC VOCABULARY (LIKE DEMOCRATIC AND SERVENT LEADERSHIP STYLES) -->
                         <article id="mus1" class="box blurb musBorder">
                             <h3>Percussion</h3>
                             <div class="content">
-                                <p>Percussionist with 15 years of experience playing a wide assortment of percussion (or related) instruments.</p>
-                                <p id="musExpanded1" class="expanded">Taught by several teachers and holds experience from dozens of musical groups. Versatile performer capable of entering any group or any genre. Garnered much leadership experience after being in several section leader/principal percussion positions.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Percussionist with 15 years of experience playing a wide assortment of percussion (or related) instruments.
+                                </p>
+                                <p id="musExpanded1" class="expanded">
+                                    Taught by several teachers and holds experience from dozens of musical groups. Versatile performer capable of entering any group or any genre. Garnered much leadership experience after being in several section leader/principal percussion positions.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('musExpanded1', this)" >&#x25BC;</button>
                             </div>
                         </article>
                         <article id="mus4" class="box blurb musBorder">
                             <h3>Music Theory</h3>
                             <div class="content">
-                                <p>Educated in Western Classical Music Theory by Dr. Kaitlin Bove and Dr. Kenneth Owen at Pierce College in <abbr title="Washington State">WA</abbr>.</p>
-                                <p id="musExpanded4" class="expanded">Knowledgeable of Scales, enharmonics, intervals, triads & 7th chord structures & inversions, part writing/voice leading & counterpoint, harmonic progressions, musical form & structure, non-harmonic tones, sequences, applied chords (tonicization & modulation) and modal mixture. Capable transcriber for most instruments (including all percussion). Understanding of lead sheet symbols often used in jazz. Keen understanding of a-tonal music and common patterns used in its composition. Extremely comfortable with meter and rhythm.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Educated in Western Classical Music Theory by Dr. Kaitlin Bove and Dr. Kenneth Owen at Pierce College in <abbr title="Washington State">WA</abbr>.
+                                </p>
+                                <p id="musExpanded4" class="expanded">
+                                    Knowledgeable of Scales, enharmonics, intervals, triads & 7th chord structures & inversions, part writing/voice leading & counterpoint, harmonic progressions, musical form & structure, non-harmonic tones, sequences, applied chords (tonicization & modulation) and modal mixture. Capable transcriber for most instruments (including all percussion). Understanding of lead sheet symbols often used in jazz. Keen understanding of a-tonal music and common patterns used in its composition. Extremely comfortable with meter and rhythm.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('musExpanded4', this)" >&#x25BC;</button>
                             </div>
                         </article>
                         <article id="mus7" class="box blurb musBorder">
                             <h3>Ear Training</h3>
                             <div class="content">
-                                <p>Competent relative pitch for tuning and performance purposes.</p>
-                                <p id="musExpanded7" class="expanded">Specially trained at tuning timpani before and during a run-through of a piece with or without gauges/guides. Also capable of tuning percussion instruments.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Competent relative pitch for tuning and performance purposes.
+                                </p>
+                                <p id="musExpanded7" class="expanded">
+                                    Specially trained at tuning timpani before and during a run-through of a piece with or without gauges/guides. Also capable of tuning percussion instruments.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('musExpanded7', this)" >&#x25BC;</button>
                             </div>
                         </article>
                         <article id="mus10" class="box blurb musBorder">
                             <h3>Keyboarding</h3>
                             <div class="content">
-                                <p>Trained for a year by Heidi Davidson in keyboarding fundamentals.</p>
-                                <p id="musExpanded10" class="expanded">Teachings include playing with proper technique in several starting positions. Experience playing in several major and minor keys.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Trained for a year by Heidi Davidson in keyboarding fundamentals.
+                                </p>
+                                <p id="musExpanded10" class="expanded">
+                                    Teachings include playing with proper technique in several starting positions. Experience playing in several major and minor keys.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('musExpanded10', this)" >&#x25BC;</button>
                             </div>
                         </article>
                     </div>
+
                     <div class="column">
                         <article id="mus2" class="box blurb musBorder">
                             <h3>Snare Drum</h3>
                             <div class="content">
-                                <p>Trained extensively on Marching Snare Drum by Emmanuel Olaiya and Brent Edwards.</p>
-                                <p id="musExpanded2" class="expanded">Very capable performer in both group and solo settings. Has a very strong grasp of rudimental drumming, including a refined technique in both matched and traditional grip, a focused playing mindset, effective sight-reading skills, and a deep understanding of commonalities (like rudiments or exercises) found within the rudimental drumming space. Just as effective a player on concert snare as marching snare.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Trained extensively on Marching Snare Drum by Emmanuel Olaiya and Brent Edwards.
+                                </p>
+                                <p id="musExpanded2" class="expanded">
+                                    Very capable performer in both group and solo settings. Has a very strong grasp of rudimental drumming, including a refined technique in both matched and traditional grip, a focused playing mindset, effective sight-reading skills, and a deep understanding of commonalities (like rudiments or exercises) found within the rudimental drumming space. Just as effective a player on concert snare as marching snare.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('musExpanded2', this)" >&#x25BC;</button>
                             </div>
                         </article>
                         <article id="mus5" class="box blurb musBorder">
                             <h3>Mallet Instruments</h3>
                             <div class="content">
-                                <p>Taught for several years by Dr. Miho Takekawa on the Marimba and Vibraphone.</p>
-                                <p id="musExpanded5" class="expanded">Honed skills in 4-mallet technique (primarily Steven’s grip). Capable of performing in solo or group settings, mainly in the classical setting. Competent on Xylophone, glockenspiel (orchestral bells) or other similar mallet instruments.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Taught for several years by Dr. Miho Takekawa on the Marimba and Vibraphone.
+                                </p>
+                                <p id="musExpanded5" class="expanded">
+                                    Honed skills in 4-mallet technique (primarily Steven’s grip). Capable of performing in solo or group settings, mainly in the classical setting. Competent on Xylophone, glockenspiel (orchestral bells) or other similar mallet instruments.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('musExpanded5', this)" >&#x25BC;</button>
                             </div>
                         </article>
                         <article id="mus8" class="box blurb musBorder">
                             <h3>Drum Kit</h3>
                             <div class="content">
-                                <p>Mostly self-taught drum-kit performer with guidance from Dr. Miho Takekawa and Dr. James Doyle.</p>
-                                <p id="musExpanded8" class="expanded">Experienced primarily in jazz, and but also rock, concert, contemporary, and electronic performance settings. Jazz drumming experience includes swing, Latin, and others.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Mostly self-taught drum-kit performer with guidance from Dr. Miho Takekawa and Dr. James Doyle.
+                                </p>
+                                <p id="musExpanded8" class="expanded">
+                                    Experienced primarily in jazz, and but also rock, concert, contemporary, and electronic performance settings. Jazz drumming experience includes swing, Latin, and others.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('musExpanded8', this)" >&#x25BC;</button>
                             </div>
                         </article>
                         <article id="mus11" class="box blurb musBorder">
                             <h3>Teaching</h3>
                             <div class="content">
-                                <p>Experienced teacher in many musical subjects for students up to an early collegiate level.</p>
-                                <p id="musExpanded11" class="expanded">Expertise mostly in marching, concert, and athletic band styles and percussion instruments, but can also teach lower-level drum kit. Also capable of teaching music theory and lower-level keyboard. Competent tutor in both private and group settings. Knowledgeable of a vast amount of repertoire useful for assigning to students to help them grow as musicians. Experiences are derived from teaching students in middle school, high school, community colleges, and 4-year universities.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Experienced teacher in many musical subjects for students up to an early collegiate level.
+                                </p>
+                                <p id="musExpanded11" class="expanded">
+                                    Expertise mostly in marching, concert, and athletic band styles and percussion instruments, but can also teach lower-level drum kit. Also capable of teaching music theory and lower-level keyboard. Competent tutor in both private and group settings. Knowledgeable of a vast amount of repertoire useful for assigning to students to help them grow as musicians. Experiences are derived from teaching students in middle school, high school, community colleges, and 4-year universities.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('musExpanded11', this)" >&#x25BC;</button>
                             </div>
                         </article>
                     </div>
+
                     <div class="column">
                         <article id="mus3" class="box blurb musBorder">
                             <h3>Symphonic Band</h3>
                             <div class="content">
-                                <p>Gained vast experience in collegiate through professional level musical groups.</p>
-                                <p id="musExpanded3" class="expanded">Capable of playing most percussion instruments, including snare, mallets, timpani, hand-drums, cymbals, most auxiliary, and some niche instruments like the bodhran.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Gained vast experience in collegiate through professional level musical groups.
+                                </p>
+                                <p id="musExpanded3" class="expanded">
+                                    Capable of playing most percussion instruments, including snare, mallets, timpani, hand-drums, cymbals, most auxiliary, and some niche instruments like the bodhran.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('musExpanded3', this)" >&#x25BC;</button>
                             </div>
                         </article>
                         <article id="mus6" class="box blurb musBorder">
                             <h3>Marching & Drum Corps</h3>
                             <div class="content">
-                                <p>Extensively trained in marching/drum corps music and performance</p>
-                                <p id="musExpanded6" class="expanded">Experienced playing marching snare, bass, tenors, crash cymbals, and glockenspiel. Vast performance experience from parades and field shows. Refined technique in marching footwork, including technique specific to marching battery. Versed in general effects often used in field show settings. Capable of writing/arranging music, effects, and drill for marching battery.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Extensively trained in marching/drum corps music and performance.
+                                </p>
+                                <p id="musExpanded6" class="expanded">
+                                    Experienced playing marching snare, bass, tenors, crash cymbals, and glockenspiel. Vast performance experience from parades and field shows. Refined technique in marching footwork, including technique specific to marching battery. Versed in general effects often used in field show settings. Capable of writing/arranging music, effects, and drill for marching battery.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('musExpanded6', this)" >&#x25BC;</button>
                             </div>
                         </article>
                         <article id="mus9" class="box blurb musBorder">
                             <h3>Athletic Band & Drumline</h3>
                             <div class="content">
-                                <p>Highly experienced player in athletic settings & performing stadium and drumline music.</p>
-                                <p id="musExpanded9" class="expanded">Excellent player and soloist on all marching percussion instruments. Capable of writing/arranging music of all skill levels for drumline.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Highly experienced player in athletic settings & performing stadium and drumline music.
+                                </p>
+                                <p id="musExpanded9" class="expanded">
+                                    Excellent player and soloist on all marching percussion instruments. Capable of writing/arranging music of all skill levels for drumline.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('musExpanded9', this)" >&#x25BC;</button>
                             </div>
                         </article>
                         <article id="mus12" class="box blurb musBorder">
                             <h3>Jazz</h3>
                             <div class="content">
-                                <p>Experienced jazz performer on drum set, hand-drums and applicable auxiliary in jazz-band or jazz-combo settings.</p>
-                                <p id="musExpanded12" class="expanded">Genres include swing, Latin, bossa nova, samba, blues, and big band. Capable of arranging music for and directing low to mid-level ensembles.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Experienced jazz performer on drum set, hand-drums and applicable auxiliary in jazz-band or jazz-combo settings.
+                                </p>
+                                <p id="musExpanded12" class="expanded">
+                                    Genres include swing, Latin, bossa nova, samba, blues, and big band. Capable of arranging music for and directing low to mid-level ensembles.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('musExpanded12', this)" >&#x25BC;</button>
                             </div>
                         </article>
                     </div>
+
                 </div>
             </section>
+
             <!-- || SOFT SKILLS || -->
             <section id="blurbSoft">
                 <h1 class="titles blurbsTitles">Soft Skills</h1>
                 <div class="blurbs">
+
                     <div class="column">
-                        <!-- ADD <abbr> TAGS TO ALL ABBREVIATIONS AND MORE SEPCIFIC VOCABULARY (LIKE DEMOCRATIC AND SERVENT LEADERSHIP STYLES) -->
                         <article id="soft1" class="box blurb softBorder">
                             <h3>Leadership</h3>
                             <div class="content">
-                                <p>Garnered strong leadership skills after being in numerous leadership and management positions.</p>
-                                <p id="softExpanded1" class="expanded">Began fulfilling leadership roles in middle school, and consistently throughout high school, college, and post-college activities. Accepts the responsibility that a leader should hold and remains open to criticism. Has a strong willingness to listen to those around him.  Strongly believes leaders cannot be strong or effective in their space unless they have been a strong follower in that space first.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Garnered strong leadership skills after being in numerous leadership and management positions.
+                                </p>
+                                <p id="softExpanded1" class="expanded">
+                                    Began fulfilling leadership roles in middle school, and consistently throughout high school, college, and post-college activities. Accepts the responsibility that a leader should hold and remains open to criticism. Has a strong willingness to listen to those around him.  Strongly believes leaders cannot be strong or effective in their space unless they have been a strong follower in that space first.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('softExpanded1', this)" >&#x25BC;</button>
                             </div>
                         </article>
                         <article id="soft4" class="box blurb softBorder">
                             <h3>Teamwork</h3>
                             <div class="content">
-                                <p>Exhibites teamwork constantly in work, musical, and personal environments.</p>
-                                <p id="softExpanded4" class="expanded">Capable of breaking a task into pieces to divide and conquer or collaborating with others to improve the speed or quality of a single task. Understanding of people’s strengths and weaknesses. Willing to work on tasks fitting those strengths, or to work on tasks fit to improve weakness.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Exhibites teamwork constantly in work, musical, and personal environments.
+                                </p>
+                                <p id="softExpanded4" class="expanded">
+                                    Capable of breaking a task into pieces to divide and conquer or collaborating with others to improve the speed or quality of a single task. Understanding of people’s strengths and weaknesses. Willing to work on tasks fitting those strengths, or to work on tasks fit to improve weakness.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('softExpanded4', this)" >&#x25BC;</button>
                             </div>
                         </article>
                         <article id="soft7" class="box blurb softBorder">
                             <h3>Teaching</h3>
                             <div class="content">
-                                <p>Capable tutor exhibiting patience and understanding for those new to or learning about a subject.</p>
-                                <p id="softExpanded7" class="expanded">Effective at communicating topics with students through multiple mediums and helping find the best way to teach them. Experience as a teacher includes training employees in a retail setting, teaching a class of musical students, or tutoring individuals in a multitude of academic and musical topics.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Capable tutor exhibiting patience and understanding for those new to or learning about a subject.
+                                </p>
+                                <p id="softExpanded7" class="expanded">
+                                    Effective at communicating topics with students through multiple mediums and helping find the best way to teach them. Experience as a teacher includes training employees in a retail setting, teaching a class of musical students, or tutoring individuals in a multitude of academic and musical topics.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('softExpanded7', this)" >&#x25BC;</button>
                             </div>
                         </article>
                         <article id="soft10" class="box blurb softBorder">
                             <h3>Customer Service</h3>
                             <div class="content">
-                                <p>Impactful customer service, learned from years of serving customers, clients, and students.</p>
-                                <p id="softExpanded10" class="expanded">Able to act professionally in public settings where current or potential consumers reside. Always tries to be more than fair to those being served, especially those who have conflict with provided services. Very capable of working with a client/customer who is unsatisfied with services by improving their experience through patience, understanding and friendliness.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Impactful customer service, learned from years of serving customers, clients, and students.
+                                </p>
+                                <p id="softExpanded10" class="expanded">
+                                    Able to act professionally in public settings where current or potential consumers reside. Always tries to be more than fair to those being served, especially those who have conflict with provided services. Very capable of working with a client/customer who is unsatisfied with services by improving their experience through patience, understanding and friendliness.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('softExpanded10', this)" >&#x25BC;</button>
                             </div>
                         </article>
                     </div>
+
                     <div class="column">
                         <article id="soft2" class="box blurb softBorder">
                             <h3>Problem Solving</h3>
                             <div class="content">
-                                <p>Extremely effective problem solver, always looking to find a solution or an improvement over the relevant situation.</p>
-                                <p id="softExpanded2" class="expanded">Strong critical thinking skills allow for problem solving in academic settings (example: math/science problems), social settings (example: a dispute between multiple people), and other general day-to-day settings. Capable of holding a logical mindset in highly emotional situations. Skills are derived from many years in college, employment, musical groups, and many other activities.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Extremely effective problem solver, always looking to find a solution or an improvement over the relevant situation.
+                                </p>
+                                <p id="softExpanded2" class="expanded">
+                                    Strong critical thinking skills allow for problem solving in academic settings (example: math/science problems), social settings (example: a dispute between multiple people), and other general day-to-day settings. Capable of holding a logical mindset in highly emotional situations. Skills are derived from many years in college, employment, musical groups, and many other activities.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('softExpanded2', this)" >&#x25BC;</button>
                             </div>
                         </article>
                         <article id="soft5" class="box blurb softBorder">
                             <h3>Crisis Management</h3>
                             <div class="content">
-                                <p>Able to take advantage of problem-solving skills in the event of a crisis.</p>
-                                <p id="softExpanded5" class="expanded">Capable of remaining calm and collected under extreme stress and finding a path forward to negating as much damage as possible. Derived from many small-scale incidents throughout years of studying academics and performing music, and through one long-term / large-scale incident while employed in retail.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Able to take advantage of problem-solving skills in the event of a crisis.
+                                </p>
+                                <p id="softExpanded5" class="expanded">
+                                    Capable of remaining calm and collected under extreme stress and finding a path forward to negating as much damage as possible. Derived from many small-scale incidents throughout years of studying academics and performing music, and through one long-term / large-scale incident while employed in retail.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('softExpanded5', this)" >&#x25BC;</button>
                             </div>
                         </article>
                         <article id="soft8" class="box blurb softBorder">
                             <h3>Time Management</h3>
                             <div class="content">
-                                <p>Capable of managing time and prioritizing tasks crucial to the greater mission.</p>
-                                <p id="softExpanded8" class="expanded">Always searching for ways to make a task more efficient without "cutting corners."</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Capable of managing time and prioritizing tasks crucial to the greater mission.
+                                </p>
+                                <p id="softExpanded8" class="expanded">
+                                    Always searching for ways to make a task more efficient without "cutting corners."
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('softExpanded8', this)" >&#x25BC;</button>
                             </div>
                         </article>
                         <article id="soft11" class="box blurb softBorder">
                             <h3>Positive Work Ethic</h3>
                             <div class="content">
-                                <p>Engages in practices that are not deceiving to customers and colleagues.</p>
-                                <p id="softExpanded11" class="expanded">Always stays busy during work hours, even if all assigned work has been completed. Always thinking of and experimenting with ways to improve self-performance.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Engages in practices that are not deceiving to customers and colleagues.
+                                </p>
+                                <p id="softExpanded11" class="expanded">
+                                    Always stays busy during work hours, even if all assigned work has been completed. Always thinking of and experimenting with ways to improve self-performance.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('softExpanded11', this)" >&#x25BC;</button>
                             </div>
                         </article>
                     </div>
+
                     <div class="column">
                         <article id="soft3" class="box blurb softBorder">
                             <h3>Emotional Intelligence</h3>
                             <div class="content">
-                                <p>Calm, collected, patient, understanding, and compassionate.</p>
-                                <p id="softExpanded3" class="expanded">Very self-aware of personal mood and able to act accordingly in social settings. Also, capably aware of other's mental / emotional state and generally how to approach situations that might involve them. Good with keeping composure in high-stress environments. Strives to be trusting, truthful, and reliable. Capable of confrontation in a reasonable manner.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Calm, collected, patient, understanding, and compassionate personality.
+                                </p>
+                                <p id="softExpanded3" class="expanded">
+                                    Very self-aware of personal mood and able to act accordingly in social settings. Also, capably aware of other's mental / emotional state and generally how to approach situations that might involve them. Good with keeping composure in high-stress environments. Strives to be trusting, truthful, and reliable. Capable of confrontation in a reasonable manner.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('softExpanded3', this)" >&#x25BC;</button>
                             </div>
                         </article>
                         <article id="soft6" class="box blurb softBorder">
                             <h3>Communication</h3>
                             <div class="content">
-                                <p>Comfortable speaking with other individuals about any topic, including personal topics when appropriate.</p>
-                                <p id="softExpanded6" class="expanded">Capable of speaking in front of small teams or large groups, up to that the size of an auditorium. Willing to be confrontational if necessary while striving to be understanding and reasonable. Strong writing skills and a good grasp of persuasion in written or verbal form.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Comfortable speaking with other individuals about any topic, including personal topics when appropriate.
+                                </p>
+                                <p id="softExpanded6" class="expanded">
+                                    Capable of speaking in front of small teams or large groups, up to that the size of an auditorium. Willing to be confrontational if necessary while striving to be understanding and reasonable. Strong writing skills and a good grasp of persuasion in written or verbal form.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('softExpanded6', this)" >&#x25BC;</button>
                             </div>
                         </article>
                         <article id="soft9" class="box blurb softBorder">
                             <h3>Creativity</h3>
                             <div class="content">
-                                <p>Powerful sense of artistic/logical creativity, practiced in several mediums like music, coding, or other personal activities.</p>
-                                <p id="softExpanded9" class="expanded">Understands the value of learning the rules of a subject, but also accepts that rules can and should be bent or broken in some cases. Not limited to thinking within the status quo and enjoys thinking ‘outside the box.’</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Powerful sense of artistic/logical creativity, practiced in several mediums like music, coding, or other personal activities.
+                                </p>
+                                <p id="softExpanded9" class="expanded">
+                                    Understands the value of learning the rules of a subject, but also accepts that rules can and should be bent or broken in some cases. Not limited to thinking within the status quo and enjoys thinking ‘outside the box.’
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('softExpanded9', this)" >&#x25BC;</button>
                             </div>
                         </article>
                         <article id="soft12" class="box blurb softBorder">
                             <h3>Adaptive</h3>
                             <div class="content">
-                                <p>Very capable of adapting to any situation on the fly.</p>
-                                <p id="softExpanded12" class="expanded">Comfortable with performing all aforementioned skills just as effectively, and tends to become a primary decision-maker in situations that fall outside of the status-quo.</p>
-                                <div class="gap"></div>
+                                <p>
+                                    Very capable of adapting to any situation on the fly.
+                                </p>
+                                <p id="softExpanded12" class="expanded">
+                                    Comfortable with performing all aforementioned skills just as effectively, and tends to become a primary decision-maker in situations that fall outside of the status-quo.
+                                </p>
                                 <button class="pulldown" onclick="toggleBlurb('softExpanded12', this)" >&#x25BC;</button>
                             </div>
                         </article>
                     </div>
+
                 </div>
             </section>
+
         </main>
+
         <script src="../js/utility.js"></script>
-        <script src="../js/lessons.js"></script>
-        <script src="../js/skill.js"></script>
+        <script src="../js/skills.js"></script>
+
     </body>
 </html>

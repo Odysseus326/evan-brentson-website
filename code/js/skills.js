@@ -4,7 +4,7 @@ const dev = document.getElementById("blurbDev");
 const mus = document.getElementById("blurbMus");
 const soft = document.getElementById("blurbSoft");
 
-// Tracks which selector is active 
+// Tracks which button (.selector) is active 
 let activeButton = gen;
 // Tracks which blurb is currently open
 var activeBlurb = "none";
@@ -18,84 +18,101 @@ function toggleCurrent() {
   }
 }
 
+
 // || BUTTONS ||
 // Hides current blurbs and shows selected ones
 function selectDev() {
   console.log("Software engineering selected");
+
   switch (activeButton) {
     case gen:
       console.log("Hiding general blurbs");
       gen.style.display = "none";
       break;
+
     case mus:
       console.log("Hiding music blurbs");
       mus.style.display = "none";
       break;
+
     case soft:
       console.log("Hiding soft skills blurbs");
       soft.style.display = "none";
       break;
+
     default:
-      alreadySelected();
+      alreadySelected();  // Alerts user the button is already selected. Also closes open blurb (if any)
       break;
   }
   console.log("Showing dev blurbs");
   dev.style.display = "block";
   toggleCurrent();
-  activeButton = dev;
+  activeButton = dev;  // Sets selected button as active
 }
 
 function selectMus() {
   console.log("Music selected");
+
   switch (activeButton) {
+
     case gen:
       console.log("Hiding general blurbs");
       gen.style.display = "none";
       break;
+
     case dev:
       console.log("Hiding software engineering blurbs");
       dev.style.display = "none";
       break;
+
     case soft:
       console.log("Hiding soft skills blurbs");
       soft.style.display = "none";
       break;
+
     default:
-      alreadySelected();
-      toggleCurrent();
+      alreadySelected();  // Alerts user the button is already selected. Also closes open blurb (if any)
       break;
   }
   console.log("Showing mus blurbs");
   mus.style.display = "block";
-  activeButton = mus;
+  toggleCurrent();
+  activeButton = mus;  // Sets selected button as active
 }
 
 function selectSoft() {
   console.log("Soft skills selected");
+
   switch (activeButton) {
+
     case gen:
       console.log("Hiding general blurbs");
       gen.style.display = "none";
       break;
+
     case dev:
       console.log("Hiding software engineering blurbs");
       dev.style.display = "none";
       break;
+
     case mus:
       console.log("Hiding music blurbs");
       mus.style.display = "none";
       break;
+
     default:
-      alreadySelected();
+      alreadySelected();  // Alerts user the button is already selected. Also closes open blurb (if any)
       break;
   }
+
   console.log("Showing soft skills blurbs");
   soft.style.display = "block";
   toggleCurrent();
-  activeButton = soft;
+  activeButton = soft;  // Sets selected button as active
 }
 
-// Alerts user if the clicked button is already selected
+
+// || Alerts user if the clicked button is already selected ||
 function alreadySelected() {
   const message =
     "Option is already selected. Please select a different option.";
@@ -103,8 +120,9 @@ function alreadySelected() {
   alert(message);
 }
 
-// Determines how a blurb will behave
-function toggleBlurb(selector, button) {
+
+// || Determines how a blurb will behave ||
+function toggleBlurb(selector, arrow) {
   let upArrow = "&#x25B2;";
   let downArrow = "&#x25BC;";
 
@@ -121,28 +139,31 @@ function toggleBlurb(selector, button) {
   let element = document.getElementById(selector);
   if (selector === activeBlurb) {
     element.style.height = "0px";
-    button.innerHTML = downArrow;
+    arrow.innerHTML = downArrow;
     toggleBorder(selector, false);
     activeBlurb = "none";
     activeArrow = undefined;
+  
   } else {
     // Opens selected blurb if in closed state
     element.style.height = element.scrollHeight + "px";
-    button.innerHTML = upArrow;
+    arrow.innerHTML = upArrow;
     activeBlurb = selector;
-    activeArrow = button;
+    activeArrow = arrow;
     toggleBorder(selector, true);
     console.log(activeBlurb.replace("Expanded", "") + " toggled on,");
   }
 }
 
-// Code for blurb behavior. Content = id (in String format), blurbState = true/false
+
+// || Code for blurb behavior. Content = id (in String format), blurbState = true/false ||
 function toggleBorder(content, blurbState) {
   let num = "";
   let selector = "";
   let element;
 
-  // Checks if the second to last character of id is a number
+// Utilizes String manipulation for getting specific blurb number and ID
+  // Checks if the second to last character of id is a number (ex: "devExpanded1" vs "devExpanded12")
   if (!isNaN(content.charAt(content.length - 2)))
     num = content.charAt(content.length - 2);
   num = num + content.charAt(content.length - 1);
@@ -152,10 +173,10 @@ function toggleBorder(content, blurbState) {
     selector = "dev" + num;
     element = document.getElementById(selector);
 
-    if (blurbState) {
+    if (blurbState) {  // dev to soft
       element.classList.remove("devBorder");
       element.classList.add("softBorder");
-    } else {
+    } else {  // soft to dev
       element.classList.remove("softBorder");
       element.classList.add("devBorder");
     }
@@ -165,10 +186,10 @@ function toggleBorder(content, blurbState) {
     console.log(selector + "printed");
     element = document.getElementById(selector);
 
-    if (blurbState) {
+    if (blurbState) {  // mus to soft
       element.classList.remove("musBorder");
       element.classList.add("softBorder");
-    } else {
+    } else {  // soft to mus
       element.classList.remove("softBorder");
       element.classList.add("musBorder");
     }
@@ -180,16 +201,16 @@ function toggleBorder(content, blurbState) {
 
     if (blurbState) {
       element.classList.remove("softBorder");
-      if (Number(num) % 2 == 0) {
+      if (Number(num) % 2 == 0) {  // soft to dev
         element.classList.add("devBorder");
-      } else {
+      } else {  // soft to mus
         element.classList.add("musBorder");
       }
 
     } else {
-      if (Number(num) % 2 == 0) {
+      if (Number(num) % 2 == 0) {  // dev to soft
         element.classList.remove("devBorder");
-      } else {
+      } else {  // mus to soft
         element.classList.remove("musBorder");
       }
       element.classList.add("softBorder");

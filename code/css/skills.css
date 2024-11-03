@@ -1,123 +1,176 @@
-:root {
+content:root {  /* Different shades of secondary colors. "MED" = medium */
     --DEV-MEDCOLOR: #3f89c5ab;
     --MUS-MEDCOLOR: #d72638a9;
     --GEN-MEDCOLOR: #f49c37a8;
 }
 
 main {
-    margin: 4vh 0;
-    padding-top: 3.75rem;
+    margin: 6rem 0 2rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4vh;
+    gap: 1.5rem;
 }
-#intro {
-    display: block;
+
+#instructions {
     text-align: center;
 }
-#selectors {
-    margin-top: 2rem;
+
+#selectors {  /* Container of buttons */
+    margin-top: 1.2rem;
     display: flex;
     flex-direction: row;
-    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
 }
-.selector {
+
+.selector {  /* Buttons */
     color: var(--FC);
     background-color: transparent;
-    font-size: 1.563rem;
-    width: 25rem;
-    padding: 1.25rem 0;
+    font-size: 1rem;
+    width: 12.5rem;
+    padding: 0.75rem 0;
 }
+
+/* Button behavior */
 #devButton:hover {
-    background-color: var(--DEV-DARKCOLOR);
+    background-color: var(--DEV-DARKCOLOR);  /* Variable found in 'foundation.css' */
 }
+
 #musButton:hover {
     background-color: var(--MUS-DARKCOLOR);
 }
+
 #softButton:hover {
     background-color: var(--GEN-DARKCOLOR);
 }
+
 #devButton:active {
     background-color: var(--DEV-MEDCOLOR);
 }
+
 #musButton:active {
     background-color: var(--MUS-MEDCOLOR);
 }
+
 #softButton:active {
     background-color: var(--GEN-MEDCOLOR);
 }
+
 /* || BLURBs || */
 #overview {
     color: whitesmoke;
 }
 
+/* Display = show until a button is pressed. Utilizes JS in skills.js */
 #blurbGen {
     display: show;
 }
+
+/* Display = none until its respective button is pressed. Utilizes JS in skills.js */
 #blurbDev {
     display: none;
 }
+
 #blurbMus {
     display: none;
 }
+
 #blurbSoft {
     display: none;
 }
+
 /* BLURB TEMPLATES */
-.blurbsTitles {
+.blurbsTitles {  /* Main title of each group of blurbs */
     text-align: center;
     margin-bottom: 4vh;
 }
-.blurbs {
+
+.blurbs,
+.column {  /* Defines rows and columns of blurbs */
     display: flex;
+    gap: 2.4rem;
+}
+
+.blurbs {  /* Container around blurb columns */
     flex-direction: row;
-    gap: 4rem;
 }
-.blurbs .column {
-    display: flex;
+
+.column {  /* Container column of blurbs */
     flex-direction: column;
-    gap: 4rem;
 }
-.blurb h3 {
+
+.blurb h3 {  /* Individual blurb title */
     text-align: center;
 }
-.blurb {
+
+.blurb {  /* Individual blurbs */
     line-height: 1.5;
-    width: 28.125rem;
-    height: max-content;
-    padding: 1.25rem 2.5rem 0rem 2.5rem;
-    transition-property: height;
-    transition-duration: 500ms;
-    transition-timing-function: ease;
+    width: 20rem;
+    height: max-content;  /* Ensures box adjusts with expanded text */
+    padding: 0.75rem 1.5rem 0 1.5rem;
 }
-#blurbGen .blurb {
-    padding-bottom: 1.5rem;
+
+#blurbGen
+.blurb {
+    padding-bottom: 0.9rem;
 }
-#blurbDev h1, .devBorder h3 {
+
+/* Colors each category of blurb titles */
+#blurbDev h1,
+.devBorder h3 {
     color: var(--DEV-SECCOLOR)
 }
-#blurbMus h1, .musBorder h3 {
+
+#blurbMus h1,
+.musBorder h3 {
     color: var(--MUS-SECCOLOR)
 }
-#blurbSoft h1, .softBorder h3 {
+
+#blurbSoft h1,
+.softBorder h3 {
     color: var(--GEN-SECCOLOR)
 }
+
+/* Pulldown arrow button */
 .pulldown {
-    font-size: 1.25rem;
+    font-size: 0.75rem;
     color: whitesmoke;
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
+
+/* Blurb text, inlcuding expanded text (excludes titles) */
 .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
+/* Content revealed from pulldown arrow button */
 .expanded {
-    height: 0;
+    height: 0;  /* Starts hidden. Utilizes JS in skills.js to hide and reveal text */
+    transition-property: height;
     transition-duration: 500ms;
     transition-timing-function: ease;
     overflow: hidden;
+}
+
+/* || MOBILE SETTINGS || */
+@media screen and (max-width: 768px) {
+
+    /* Buttons and blurbs format fully to columns */
+    #selectors {
+        flex-direction: column;
+    }
+
+    .blurbs {
+        flex-direction: column;
+    }
+
+    .blurb {
+        width: 26rem;
+    }
 }
