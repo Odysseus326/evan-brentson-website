@@ -77,7 +77,7 @@ function showID(selector) {
 // Introduction animation. Throws error if delay delay fuction is rejected (see above)
 async function introAnim() {
     try {
-        await delay(500);
+        await delay(1000);
         await fadeInID("hi", 8);
         console.log('Fade in "hi" complete');
         await delay(500);
