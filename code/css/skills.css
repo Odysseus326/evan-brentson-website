@@ -161,6 +161,10 @@ main {
 /* || MOBILE SETTINGS || */
 @media screen and (max-width: 768px) {
 
+    #instructions {
+        padding: 0 3rem;
+    }
+
     /* Buttons and blurbs format fully to columns */
     #selectors {
         flex-direction: column;
