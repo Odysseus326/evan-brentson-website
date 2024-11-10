@@ -25,6 +25,7 @@ header {
 
 #port button,
 #lessons button {  /* PORTFOLIO and LESSONS header elements */
+    font-size: clamp(8px, 0.8rem, 14px);
     color: var(--FC);
     background-color: transparent;
     border: none;
