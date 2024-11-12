@@ -12,4 +12,4 @@ THIS WEBSITE IS NOW LIVE [HERE](https://evanbrentson.com/)!
 
 <p>AI had no part in development either.</p>
 
-<p>This website is a testament to Evans fundamental abilities as a software developer. Please feel free to look at it and learn more about Evan!</p>
+<p>This website is testament to Evan's fundamental abilities as a software developer. Please feel free to look at it and learn more about Evan!</p>
