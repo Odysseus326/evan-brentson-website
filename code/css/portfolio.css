@@ -68,6 +68,14 @@ img {  /* Only affects music imgs */
     height: 20.25rem;
 }
 
+a, a:visited {
+    color: var(--GEN-SECCOLOR);
+}
+
+a:hover, a:focus {
+    color: var(--GEN-DARKCOLOR);
+}
+
 .devHr {
     background-color: var(--DEV-SECCOLOR);
 }
