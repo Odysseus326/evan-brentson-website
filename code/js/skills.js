@@ -155,7 +155,7 @@ function toggleBlurb(selector, arrow) {
   }
 }
 
-
+2
 // || Code for blurb behavior. Content = id (in String format), blurbState = true/false ||
 function toggleBorder(content, blurbState) {
   let num = "";

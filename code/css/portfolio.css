@@ -76,26 +76,7 @@ img {  /* Only affects music imgs */
     background-color: var(--MUS-SECCOLOR);
 }
 
-/* Height of dev images is directly relative to the height of the text box (which is dependant on amount of text) */
-#unnamed {
-    height: 28.416667rem;  /* 682px */
-}
 
-#personalWebsite {
-    height: 54.1666667rem;  /* 1300px */
-}
-
-#firstWebpage {
-    height: 22.4166667rem;  /* 538px */
-}
-
-#landscape {
-    height: 34.4166667rem;  /* 826px */
-}
-
-#landlordDb {
-    height: 35.9166667rem;  /* 862px */
-}
 
 /* Background for each textbox. Order is 1, 2, 3, 4, 3, 2, repeat... */
 .musBg1 {
