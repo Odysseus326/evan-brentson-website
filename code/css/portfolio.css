@@ -68,11 +68,11 @@ img {  /* Only affects music imgs */
     height: 20.25rem;
 }
 
-a, a:visited {
+a.box-links, a:visited.box-links {
     color: var(--GEN-SECCOLOR);
 }
 
-a:hover, a:focus {
+a:hover.box-links, a:focus.box-links {
     color: var(--GEN-DARKCOLOR);
 }
 
