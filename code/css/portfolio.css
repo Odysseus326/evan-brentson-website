@@ -85,7 +85,6 @@ a:hover.box-links, a:focus.box-links {
 }
 
 
-
 /* Background for each textbox. Order is 1, 2, 3, 4, 3, 2, repeat... */
 .musBg1 {
     background-image: linear-gradient(var(--BGCOLOR), #d726381c);
